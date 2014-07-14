@@ -1,0 +1,68 @@
+BALL
+	- runs
+	- wicket/how out
+	- caught by
+	- striker
+	- non-striker
+	- sundries
+	- location
+	--- BELONGS TO OVER
+	--- BELONGS TO BOWLER
+	
+OVER
+	- runs
+	- wides
+	- no balls
+	- byes
+	- leg byes
+	- wickets
+	- score
+	--- HAS MANY BALLS
+	--- BELONGS TO BOWLER
+
+BOWLER
+	- overs
+	- runs
+	- wickets
+	- wides
+	- no balls
+	- maidens
+	--- HAS MANY OVERS
+	--- BELONGS TO INNINGS
+	
+BATSMAN
+	- runs
+	- balls faced
+	- fours
+	- sixes
+	- how out
+	--- HAS MANY BALLS
+	--- BELONGS TO INNINGS
+	
+FALL OF WICKET
+	- wicket
+	- batsman out
+	- batsman not out
+	- partnership
+	--- BELONGS TO INNINGS
+	
+INNINGS
+	- batting team
+	- bowling team
+	- innings number
+	- score
+	--- HAS MANY BATSMAN
+	--- HAS MANY BOWLERS
+	--- HAS MANY FALLS OF WICKET
+	
+MATCH
+	- home team
+	- away team
+	- ground
+	- start date
+	- end date
+	- competition
+	- umpire 1
+	- umpire 2
+	--- HAS MANY INNINGS
+	
