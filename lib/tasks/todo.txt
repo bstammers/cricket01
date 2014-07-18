@@ -1,0 +1,3 @@
+A.	Create models
+B.	Use console to create test data and confirm model integrity
+C.	Define controllers

@@ -8,6 +8,7 @@ BALL
 	- location
 	--- BELONGS TO OVER
 	--- BELONGS TO BOWLER
+	--- BELONGS TO BATSMAN
 	
 OVER
 	- runs
