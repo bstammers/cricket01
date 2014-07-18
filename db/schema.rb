@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140718063956) do
+ActiveRecord::Schema.define(version: 20140718065622) do
 
   create_table "balls", force: true do |t|
     t.integer  "runs"
@@ -83,6 +83,19 @@ ActiveRecord::Schema.define(version: 20140718063956) do
   end
 
   add_index "innings", ["match_id"], name: "index_innings_on_match_id"
+
+  create_table "matches", force: true do |t|
+    t.string   "home_team"
+    t.string   "away_team"
+    t.string   "ground"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "competition"
+    t.string   "umpire1"
+    t.string   "umpire2"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "overs", force: true do |t|
     t.integer  "runs"

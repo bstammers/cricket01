@@ -4,8 +4,8 @@ class CreateMatches < ActiveRecord::Migration
       t.string :home_team
       t.string :away_team
       t.string :ground
-      t.date :start
-      t.date :end
+      t.date :start_date
+      t.date :end_date
       t.string :competition
       t.string :umpire1
       t.string :umpire2
