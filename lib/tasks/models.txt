@@ -63,7 +63,16 @@ MATCH
 	- start date
 	- end date
 	- competition
+	- grade
 	- umpire 1
 	- umpire 2
 	--- HAS MANY INNINGS
+	
+PLAYER
+	- first_name
+	- last_name
+	- full_name
+	- display_name
+	- team
+	--- BELONGS TO MATCH
 	
