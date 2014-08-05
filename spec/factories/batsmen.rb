@@ -2,10 +2,11 @@
 
 FactoryGirl.define do
   factory :batsman do
-    name "MyString"
+    runs 1
     balls_faced 1
     fours 1
     sixes 1
+    how_out 1
     inning nil
   end
 end

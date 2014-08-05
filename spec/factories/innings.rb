@@ -4,7 +4,7 @@ FactoryGirl.define do
   factory :inning do
     batting_team "MyString"
     bowling_team "MyString"
-    innings_no 1
+    inning_no 1
     score "MyString"
     match nil
   end

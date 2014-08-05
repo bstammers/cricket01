@@ -7,10 +7,9 @@ class CreateBalls < ActiveRecord::Migration
       t.string :striker
       t.string :non_striker
       t.string :sundries_type
-      t.integer :sundries_amt
-      t.string :shot_location
-      t.references :bowler, index: true
-      t.references :over, index: true
+      t.integer :sundries
+      t.string :location
+      t.references :delivery, polymorphic: true
 
       t.timestamps
     end

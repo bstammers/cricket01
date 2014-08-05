@@ -1,7 +1,6 @@
 class CreateBowlers < ActiveRecord::Migration
   def change
     create_table :bowlers do |t|
-      t.string :name
       t.integer :overs
       t.integer :runs
       t.integer :wickets

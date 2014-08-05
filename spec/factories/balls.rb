@@ -8,9 +8,8 @@ FactoryGirl.define do
     striker "MyString"
     non_striker "MyString"
     sundries_type "MyString"
-    sundries_amt 1
-    shot_location "MyString"
-    bowler nil
-    over nil
+    sundries 1
+    location "MyString"
+    delivery nil
   end
 end

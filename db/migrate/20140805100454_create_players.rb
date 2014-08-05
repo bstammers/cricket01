@@ -6,7 +6,7 @@ class CreatePlayers < ActiveRecord::Migration
       t.string :full_name
       t.string :display_name
       t.string :team
-      t.references :match, index: true
+      t.references :cricketer, polymorphic: true, index: true
 
       t.timestamps
     end

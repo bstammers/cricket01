@@ -1,3 +1,11 @@
 A.	Create models
 B.	Use console to create test data and confirm model integrity
 C.	Define controllers
+
+FIRST CYCLE
+
+	1.	Create match controller
+	2.	Set up default view
+	3.	Create player controller
+	4.	Set up default view
+	5.	Set up functionality for polymorphic association between match and player 

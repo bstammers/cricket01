@@ -2,7 +2,6 @@
 
 FactoryGirl.define do
   factory :bowler do
-    name "MyString"
     overs 1
     runs 1
     wickets 1

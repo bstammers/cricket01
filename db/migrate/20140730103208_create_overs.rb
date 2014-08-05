@@ -8,7 +8,7 @@ class CreateOvers < ActiveRecord::Migration
       t.integer :leg_byes
       t.integer :wickets
       t.string :score
-      t.references :bowler, index: true
+      t.references :match_over, polymorphic: true
 
       t.timestamps
     end

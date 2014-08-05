@@ -7,8 +7,7 @@ BALL
 	- sundries
 	- location
 	--- BELONGS TO OVER
-	--- BELONGS TO BOWLER
-	--- BELONGS TO BATSMAN
+	--- BELONGS TO BATSMAN  -- polymorphic association
 	
 OVER
 	- runs
@@ -20,6 +19,7 @@ OVER
 	- score
 	--- HAS MANY BALLS
 	--- BELONGS TO BOWLER
+	--- BELONGS TO INNINGS  -- polymorphinc association
 
 BOWLER
 	- overs
@@ -55,6 +55,8 @@ INNINGS
 	--- HAS MANY BATSMAN
 	--- HAS MANY BOWLERS
 	--- HAS MANY FALLS OF WICKET
+	--- HAS MANY OVERS  (polymorphic)
+	--- BELONGS TO MATCH
 	
 MATCH
 	- home team
@@ -66,6 +68,8 @@ MATCH
 	- grade
 	- umpire 1
 	- umpire 2
+	- scorer 1
+	- scorer 2
 	--- HAS MANY INNINGS
 	
 PLAYER
@@ -74,5 +78,7 @@ PLAYER
 	- full_name
 	- display_name
 	- team
-	--- BELONGS TO MATCH
+	--- BELONGS TO MATCH    (polymorphic)
+	--- BELONGS TO BOWLER   (polymorphic)
+	--- BELONGS TO BATSMAN  (polymorphic)
 	

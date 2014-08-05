@@ -7,6 +7,6 @@ FactoryGirl.define do
     full_name "MyString"
     display_name "MyString"
     team "MyString"
-    match nil
+    cricketer nil
   end
 end
