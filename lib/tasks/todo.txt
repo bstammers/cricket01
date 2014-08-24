@@ -9,3 +9,17 @@ FIRST CYCLE
 	3.	Create player controller
 	4.	Set up default view
 	5.	Set up functionality for polymorphic association between match and player 
+	
+-------------------------------------------------------------------------------------------------
+
+V1.0 - FIRST CYCLE
+
+Ignore polymorphic associations...have duplicates if necessary.
+Remove player model...only enter player names in innings for first version.
+Remove polymorphic assocations and revert to standard associations.
+
+	1.	Delete player model
+	2.	Change existing associations to be standard instead of polymorphic
+		a.	Create extra models if required
+	3.	Create rspec tests for models
+	

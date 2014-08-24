@@ -6,10 +6,10 @@ class CreateBalls < ActiveRecord::Migration
       t.string :caught_by
       t.string :striker
       t.string :non_striker
-      t.string :sundries_type
       t.integer :sundries
+      t.string :sundries_type
       t.string :location
-      t.references :delivery, polymorphic: true
+      t.references :over, index: true
 
       t.timestamps
     end

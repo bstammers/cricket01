@@ -7,9 +7,9 @@ FactoryGirl.define do
     caught_by "MyString"
     striker "MyString"
     non_striker "MyString"
-    sundries_type "MyString"
     sundries 1
+    sundries_type "MyString"
     location "MyString"
-    delivery nil
+    over nil
   end
 end

@@ -9,6 +9,6 @@ FactoryGirl.define do
     leg_byes 1
     wickets 1
     score "MyString"
-    match_over nil
+    bowler nil
   end
 end

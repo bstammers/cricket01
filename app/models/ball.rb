@@ -1,5 +1,5 @@
 class Ball < ActiveRecord::Base
   
-  belongs_to :delivery, polymorphic: true
+  belongs_to :over
   
 end

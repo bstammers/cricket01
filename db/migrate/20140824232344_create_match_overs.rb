@@ -1,6 +1,6 @@
-class CreateOvers < ActiveRecord::Migration
+class CreateMatchOvers < ActiveRecord::Migration
   def change
-    create_table :overs do |t|
+    create_table :match_overs do |t|
       t.integer :runs
       t.integer :wides
       t.integer :no_balls
@@ -8,7 +8,7 @@ class CreateOvers < ActiveRecord::Migration
       t.integer :leg_byes
       t.integer :wickets
       t.string :score
-      t.references :match_over, polymorphic: true
+      t.references :match, index: true
 
       t.timestamps
     end

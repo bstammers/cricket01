@@ -1,6 +1,6 @@
 class Over < ActiveRecord::Base
-
-  belongs_to :match_over, polymorphic: true
-  has_many :balls, as: :delivery
-
+  
+  belongs_to :bowler
+  has_many :balls
+  
 end

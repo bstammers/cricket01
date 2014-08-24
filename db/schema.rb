@@ -50,15 +50,7 @@ ActiveRecord::Schema.define(version: 20140805100454) do
     t.integer  "maidens"
     t.integer  "inning_id"
     t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "bowlers", ["inning_id"], name: "index_bowlers_on_inning_id"
-
-  create_table "fall_of_wickets", force: true do |t|
-    t.integer  "wicket"
-    t.string   "batsman_out"
-    t.string   "batsman_not_out"
+    t.datetime "updated_at" t.string   "batsman_not_out"
     t.integer  "partnership"
     t.integer  "inning_id"
     t.datetime "created_at"
@@ -122,5 +114,13 @@ ActiveRecord::Schema.define(version: 20140805100454) do
   end
 
   add_index "players", ["cricketer_id", "cricketer_type"], name: "index_players_on_cricketer_id_and_cricketer_type"
+  end
+
+  add_index "bowlers", ["inning_id"], name: "index_bowlers_on_inning_id"
+
+  create_table "fall_of_wickets", force: true do |t|
+    t.integer  "wicket"
+    t.string   "batsman_out"
+   
 
 end

@@ -6,7 +6,8 @@ FactoryGirl.define do
     balls_faced 1
     fours 1
     sixes 1
-    how_out 1
+    how_out "MyString"
+    ball_history "MyString"
     inning nil
   end
 end
