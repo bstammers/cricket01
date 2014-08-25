@@ -18,8 +18,11 @@ Ignore polymorphic associations...have duplicates if necessary.
 Remove player model...only enter player names in innings for first version.
 Remove polymorphic assocations and revert to standard associations.
 
-	1.	Delete player model
-	2.	Change existing associations to be standard instead of polymorphic
-		a.	Create extra models if required
-	3.	Create rspec tests for models
+DONE	1.	Create models and associations
+DONE	2.	Create rspec tests for models
+		3.	Add validations for models
+		4.	Update rspec tests for models to include validations
+		5.	Create match controller
+		6.	Create rspec tests for controller
+		7.	Crete default views for match
 	

@@ -1,5 +1,11 @@
 require 'spec_helper'
 
 describe Batsman do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  context "relationships" do
+    it {should belong_to(:inning)}
+  end
+  context "validations" do
+    
+  end
 end

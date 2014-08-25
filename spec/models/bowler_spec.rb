@@ -1,5 +1,12 @@
 require 'spec_helper'
 
 describe Bowler do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  context "relationships" do
+    it {should belong_to(:inning)}
+    it {should have_many(:overs)}
+  end
+  context "validations" do
+    
+  end
 end

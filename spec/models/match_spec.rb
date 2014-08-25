@@ -1,5 +1,12 @@
 require 'spec_helper'
 
 describe Match do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  context "relationships" do
+    it {should have_many(:innings)}
+    it {should have_many(:match_overs)}
+  end
+  context "validations" do
+    
+  end
 end

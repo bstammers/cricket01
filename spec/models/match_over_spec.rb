@@ -1,5 +1,11 @@
 require 'spec_helper'
 
 describe MatchOver do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  context "relationships" do
+    it {should belong_to(:match)}
+  end
+  context "validations" do
+    
+  end
 end

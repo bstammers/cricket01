@@ -2,12 +2,12 @@
 
 FactoryGirl.define do
   factory :bowler do
-    overs 1
-    runs 1
+    overs 4
+    runs 7
     wickets 1
-    wides 1
-    no_balls 1
-    maidens 1
+    wides 2
+    no_balls 3
+    maidens 0
     inning nil
   end
 end
