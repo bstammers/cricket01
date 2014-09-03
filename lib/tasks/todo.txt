@@ -21,8 +21,12 @@ Remove polymorphic assocations and revert to standard associations.
 DONE	1.	Create models and associations
 DONE	2.	Create rspec tests for models
 		3.	Add validations for models
+DONE		a.	Validation for match model
 		4.	Update rspec tests for models to include validations
-		5.	Create match controller
-		6.	Create rspec tests for controller
-		7.	Crete default views for match
+DONE		a.	Tests for match models updated
+DONE	5.	Create match controller
+DONE	6.	Create rspec tests for controller
+DONE	7.	Create default views for match
+		8.	Add notice to all views
+		9.	Do browser based tests for all actions for verification, including invalid updates
 	

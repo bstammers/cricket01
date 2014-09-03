@@ -1,0 +1,14 @@
+<%= simple_form_for @match do |f| %>
+	<%= f.input(:home_team) %>
+	<%= f.input(:away_team) %>
+	<%= f.input(:ground) %>
+	<%= f.input(:start_date) %>
+	<%= f.input(:end_date) %>
+	<%= f.input(:competition) %>
+	<%= f.input(:grade) %>
+	<%= f.input(:umpire1) %>
+	<%= f.input(:umpire2) %>
+	<%= f.input(:scorer1) %>
+	<%= f.input(:scorer2) %>
+	<%= f.button(:submit) %>
+<% end %>

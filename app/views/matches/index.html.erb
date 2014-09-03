@@ -1,0 +1,34 @@
+<h2>All Matches</h2>
+
+<p id="notice"><%= notice %></p>
+
+<%= link_to "New Match", new_match_path %>
+
+<table width="100%">
+	<tr>
+		<th>&nbsp;</th>
+		<th>Home Team</th>
+		<th>Away Team</th>
+		<th>Start Date</th>
+		<th>End Date</th>
+		<th>Competition</th>
+		<th>Grade</th>
+		<th></th>
+	</tr>
+	<% @matches.each do |match| %>
+		<tr>
+			<td><%= match.id %></td>
+			<td><%= match.home_team %></td>
+			<td><%= match.away_team %></td>
+			<td><%= match.start_date %></td>
+			<td><%= match.end_date %></td>
+			<td><%= match.competition %></td>
+			<td><%= match.grade %></td>
+			<td>
+				<%= link_to "Show", match_path(match.id) %>&nbsp;&nbsp;
+				<%= link_to "Edit", edit_match_path(match.id) %>&nbsp;&nbsp;
+				<%= link_to "Delete", match_path(match.id), method: :destroy %>
+			</td>
+		</tr>
+	<% end %>
+</table>

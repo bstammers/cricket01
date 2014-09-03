@@ -1,0 +1,31 @@
+<h2>Match Detail</h2>
+
+<p id="notice"><%= notice %></p>
+
+<%= link_to "Back", matches_path %>&nbsp;&nbsp;
+<%= link_to "Edit", edit_match_path(@match.id) %>&nbsp;&nbsp;
+
+<table width="100%">
+	<tr><td><b>Home Team</b></td></tr>
+	<tr><td><%= @match.home_team %></td></tr>
+	<tr><td><b>Away Team</b></td></tr>
+	<tr><td><%= @match.away_team %></td></tr>
+	<tr><td><b>Start Date</b></td></tr>
+	<tr><td><%= @match.start_date %></td></tr>
+	<tr><td><b>End Date</b></td></tr>
+	<tr><td><%= @match.end_date %></td></tr>
+	<tr><td><b>Ground</b></td></tr>
+	<tr><td><%= @match.ground %></td></tr>
+	<tr><td><b>Competition</b></td></tr>
+	<tr><td><%= @match.competition %></td></tr>
+	<tr><td><b>Grade</b></td></tr>
+	<tr><td><%= @match.grade %></td></tr>
+	<tr><td><b>Umpire 1</b></td></tr>
+	<tr><td><%= @match.umpire1 %></td></tr>
+	<tr><td><b>Umpire 2</b></td></tr>
+	<tr><td><%= @match.umpire2 %></td></tr>
+	<tr><td><b>Scorer 1</b></td></tr>
+	<tr><td><%= @match.scorer1 %></td></tr>
+	<tr><td><b>Scorer 2</b></td></tr>
+	<tr><td><%= @match.scorer2 %></td></tr>
+</table>
