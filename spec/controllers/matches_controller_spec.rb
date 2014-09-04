@@ -25,14 +25,14 @@ describe MatchesController do
     end
   end
 
-   describe "POST 'create'" do
+  describe "POST 'create'" do
     context "with valid attributes" do
-      it "creates a new contact successfully" do
+      it "creates a new match successfully" do
         expect {
           post :create, match: FactoryGirl.attributes_for(:match)
         }.to change{Match.count}.by(1)
       end
-      it "opens the new contact" do
+      it "opens the new match" do
         post :create, match: FactoryGirl.attributes_for(:match)
         should redirect_to(Match.last)
       end

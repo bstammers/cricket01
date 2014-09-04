@@ -1,0 +1,8 @@
+<%= simple_form_for @inning do |f| %>
+	<%= f.error_notification %>
+	<%= f.input(:inning_no) %>
+	<%= f.input(:batting_team) %>
+	<%= f.input(:bowling_team) %>
+	<%= f.input(:score) %>
+	<%= f.button(:submit) %>
+<% end %>

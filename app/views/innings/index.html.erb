@@ -1,0 +1,32 @@
+<h2>Innings for </h2>
+
+<p id="notice"><%= notice %></p>
+
+
+<table width="100%">
+	<tr>
+		<th>&nbsp;</th>
+		<th>Inning No</th>
+		<th>Batting Team</th>
+		<th>Bowling Team</th>
+		<th>Score</th>
+		<th>Match</th>
+	</tr>
+	<% @innings.each do |inning| %>
+		<tr>
+			<td><%= inning.id %></td>
+			<td><%= inning.inning_no %></td>
+			<td><%= inning.batting_team %></td>
+			<td><%= inning.bowling_team %></td>
+			<td><%= inning.score %></td>
+			<td><%= inning.match_id %></td>
+			<td>
+				<%= link_to "Show", match_inning_path(inning.match_id, inning.id) %>&nbsp;&nbsp;
+				<%= link_to "New", new_match_inning_path(inning.match_id) %>&nbsp;&nbsp;
+				<%= link_to "Edit", edit_match_inning_path(inning.match_id, inning.id) %>&nbsp;&nbsp;
+				<%= link_to "Delete", match_inning_path(inning.match_id, inning.id), method: :destroy %>
+			</td>
+		</tr>
+	<% end %>
+</table>
+

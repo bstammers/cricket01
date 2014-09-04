@@ -1,0 +1,18 @@
+<h2>Inning Detail</h2>
+
+<p id="notice"><%= notice %></p>
+
+<%= link_to "Back", match_innings_path(@inning.match_id) %>&nbsp;&nbsp;
+<%= link_to "Edit", edit_match_inning_path(@inning.match_id, @inning.id) %>&nbsp;&nbsp;
+
+<table width="100%">
+	<tr><td><b>Inning No</b></td></tr>
+	<tr><td><%= @inning.inning_no %></td></tr>
+	<tr><td><b>Batting Team</b></td></tr>
+	<tr><td><%= @inning.batting_team %></td></tr>
+	<tr><td><b>Bowling Team</b></td></tr>
+	<tr><td><%= @inning.bowling_team %></td></tr>
+	<tr><td><b>Score</b></td></tr>
+	<tr><td><%= @inning.score %></td></tr>
+</table>
+
