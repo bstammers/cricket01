@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140824232344) do
+ActiveRecord::Schema.define(version: 20140905012003) do
 
   create_table "balls", force: true do |t|
     t.integer  "runs"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20140824232344) do
     t.integer  "inning_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   add_index "batsmen", ["inning_id"], name: "index_batsmen_on_inning_id"

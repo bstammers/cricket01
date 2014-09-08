@@ -1,0 +1,2 @@
+module BatsmenHelper
+end

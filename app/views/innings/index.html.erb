@@ -24,7 +24,8 @@
 				<%= link_to "Show", match_inning_path(inning.match_id, inning.id) %>&nbsp;&nbsp;
 				<%= link_to "New", new_match_inning_path(inning.match_id) %>&nbsp;&nbsp;
 				<%= link_to "Edit", edit_match_inning_path(inning.match_id, inning.id) %>&nbsp;&nbsp;
-				<%= link_to "Delete", match_inning_path(inning.match_id, inning.id), method: :destroy %>
+				<%= link_to "Delete", match_inning_path(inning.match_id, inning.id), method: :delete %>
+				<%= link_to "Batsmen", match_inning_batsmen_path(inning.id) %>
 			</td>
 		</tr>
 	<% end %>

@@ -1,4 +1,4 @@
-<%= simple_form_for @inning do |f| %>
+<%= simple_form_for [@match, @inning] do |f| %>
 	<%= f.error_notification %>
 	<%= f.input(:inning_no) %>
 	<%= f.input(:batting_team) %>

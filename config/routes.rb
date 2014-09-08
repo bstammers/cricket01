@@ -1,9 +1,11 @@
 Cricket01::Application.routes.draw do
   
   resources :matches do
-    resources :innings
+    resources :innings do
+      resources :batsmen, :bowlers  
+    end
   end
-  
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

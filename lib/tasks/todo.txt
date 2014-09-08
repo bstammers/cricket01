@@ -32,9 +32,6 @@ DONE	9.	Do browser based tests for all actions for verification, including inval
 
 -----------------------------------------------------------------------------------------------
 
-***   WORK OUT HOW TO HANDLE NO ITEMS IN INDEX VIEWS  ***
-***   ISSUES WITH EDIT AND NEW...CAN'T DEBUG.  SEE IF IT HAPPENS WITH OTHER CONTROLLERS  *** 
-
 V1.0 - SECOND CYCLE
 
 DONE	1.	Create rspec tests for innings model
@@ -48,9 +45,11 @@ DONE	6.	Add links to innings from match entry...in show and index
 -----------------------------------------------------------------------------------------------
 v1.0 - THIRD CYCLE
 
-	1.	Add validations for batsman model to rpsec.
-	2.	Update batsman model to pass rspec
-	3.	Create blank batsman controller
+***  FIX UP DELETE METHOD ***
+
+DONE	1.	Add validations for batsman model to rpsec.
+DONE	2.	Update batsman model to pass rspec
+DONE	3.	Create blank batsman controller
 	4.	Create rspec tests for batsman controller
 	5.	Add new methods to batsman controller one at a time to pass rspec tests
 		
