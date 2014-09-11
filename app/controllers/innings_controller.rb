@@ -1,12 +1,12 @@
 class InningsController < ApplicationController
 
 
-  #before_action :set_match, only: [:index, :new, :create]
   before_action :set_match
   before_action :set_inning, only: [:show, :edit, :update, :destroy]
 
 
   def index
+    session[:match] = @match.id
     @innings = @match.innings
   end
 

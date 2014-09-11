@@ -1,13 +1,14 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :batsman do
+  factory :batter do
     name "MyString"
-    runs 1
-    balls_faced 1
-    fours 1
-    sixes 1
+    runs 0
+    balls_faced 0
+    fours 0
+    sixes 0
     how_out "MyString"
+    bowler "MyString"
     ball_history "MyString"
     inning nil
   end

@@ -1,0 +1,24 @@
+<h2>Bowler Details</h2>
+
+<p id="notice"><%= notice %></p>
+
+<%= link_to "Back", inning_bowlers_path(@bowler.inning_id) %>&nbsp;&nbsp;
+<%= link_to "Edit", edit_bowler_path(@bowler.id) %>&nbsp;&nbsp;
+
+<table width="100%">
+	<tr><td><b>Name</b></td></tr>
+	<tr><td><%= @bowler.name %></td></tr>
+	<tr><td><b>Overs</b></td></tr>
+	<tr><td><%= @bowler.overs_bowled %></td></tr>
+	<tr><td><b>Runs</b></td></tr>
+	<tr><td><%= @bowler.runs %></td></tr>
+	<tr><td><b>Wickets</b></td></tr>
+	<tr><td><%= @bowler.wickets %></td></tr>
+	<tr><td><b>Wides</b></td></tr>
+	<tr><td><%= @bowler.wides %></td></tr>
+	<tr><td><b>No Balls</b></td></tr>
+	<tr><td><%= @bowler.no_balls %></td></tr>
+	<tr><td><b>Maidens</b></td></tr>
+	<tr><td><%= @bowler.maidens %></td></tr>
+</table>
+

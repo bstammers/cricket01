@@ -1,0 +1,36 @@
+<h2>Bowlers</h2>
+
+<p id="notice"><%= notice %></p>
+
+
+<table width="100%">
+	<tr>
+		<th>&nbsp;</th>
+		<th>Name</th>
+		<th>Overs</th>
+		<th>Runs</th>
+		<th>Wickets</th>
+		<th>Wides</th>
+		<th>No Balls</th>
+		<th>Maidens</th>
+	</tr>
+	<% @bowlers.each do |bowler| %>
+		<tr>
+			<td><%= bowler.id %></td>
+			<td><%= bowler.name %></td>
+			<td><%= bowler.overs %></td>
+			<td><%= bowler.runs %></td>
+			<td><%= bowler.wickets %></td>
+			<td><%= bowler.wides %></td>
+			<td><%= bowler.no_balls %></td>
+			<td><%= bowler.maidens %></td>
+			<td>
+				<%= link_to "Show", bowler_path(bowler.id) %>&nbsp;&nbsp;
+				<%= link_to "New", new_inning_bowler_path(bowler.inning_id) %>&nbsp;&nbsp;
+				<%= link_to "Edit", edit_bowler_path(bowler.id) %>&nbsp;&nbsp;
+				<%= link_to "Delete", bowler_path(bowler.id), method: :delete %>&nbsp;&nbsp;
+			</td>
+		</tr>
+	<% end %>
+</table>
+

@@ -1,11 +1,13 @@
-class CreateBatsmen < ActiveRecord::Migration
+class CreateBatters < ActiveRecord::Migration
   def change
-    create_table :batsmen do |t|
+    create_table :batters do |t|
+      t.string :name
       t.integer :runs
-      t.integer :balls_faced
+      t.string :balls_faced
       t.integer :fours
       t.integer :sixes
-      t.string :how_out
+      t.integer :how_out
+      t.string :bowler
       t.string :ball_history
       t.references :inning, index: true
 

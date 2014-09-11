@@ -45,13 +45,17 @@ DONE	6.	Add links to innings from match entry...in show and index
 -----------------------------------------------------------------------------------------------
 v1.0 - THIRD CYCLE
 
-***  FIX UP DELETE METHOD ***
+***  Still some errors on rspec tests even though it functions as expected ***
+***  WORK OUT HOW TO GET NEW LINK FOR BATSMAN AND BOWLER TO WORK FROM INDEX ***
 
 DONE	1.	Add validations for batsman model to rpsec.
 DONE	2.	Update batsman model to pass rspec
 DONE	3.	Create blank batsman controller
-	4.	Create rspec tests for batsman controller
-	5.	Add new methods to batsman controller one at a time to pass rspec tests
+DONE	4.	Create rspec tests for batsman controller
+DONE	5.	Add new methods to batsman controller one at a time to pass rspec tests
+DONE	6.	Create blank bowler controller
+		7.	Create rspec tests for bowler controller
+		8.	Add new methods to bowler controller one at a time to pass rspec tests
 		
 
 	

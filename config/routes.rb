@@ -1,8 +1,9 @@
 Cricket01::Application.routes.draw do
   
-  resources :matches do
+  resources :matches, shallow: :true do
     resources :innings do
-      resources :batsmen, :bowlers  
+      resources :batters
+      resources :bowlers  
     end
   end
 

@@ -1,0 +1,39 @@
+<h2>Batsmen</h2>
+
+<p id="notice"><%= notice %></p>
+
+<%= link_to "Back", match_innings_path(session[:match]) %>&nbsp;&nbsp;
+<%= link_to "New Batsman", new_inning_batter_path(session[:inning]) %>&nbsp;&nbsp;
+
+<table width="100%">
+	<tr>
+		<th>&nbsp;</th>
+		<th>Name</th>
+		<th>Ball History</th>
+		<th>Balls Faced</th>
+		<th>Fours</th>
+		<th>Sixes</th>
+		<th>Runs</th>
+		<th>How Out</th>
+		<th>Bowler</th>
+	</tr>
+	<% @batters.each do |batter| %>
+		<tr>
+			<td><%= batter.id %></td>
+			<td><%= batter.name %></td>
+			<td><%= batter.ball_history %></td>
+			<td><%= batter.balls_faced %></td>
+			<td><%= batter.fours %></td>
+			<td><%= batter.sixes %></td>
+			<td><%= batter.runs %></td>
+			<td><%= batter.how_out %></td>
+			<td><%= batter.bowler %></td>
+			<td>
+				<%= link_to "Show", batter_path(batter.id) %>&nbsp;&nbsp;
+				<%= link_to "Edit", edit_batter_path(batter.id) %>&nbsp;&nbsp;
+				<%= link_to "Delete", batter_path(batter.id), method: :delete %>&nbsp;&nbsp;
+			</td>
+		</tr>
+	<% end %>
+</table>
+

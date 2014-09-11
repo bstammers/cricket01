@@ -1,0 +1,199 @@
+  before :each do
+    @match = FactoryGirl.create(:match)
+    @inning = FactoryGirl.create(:inning, match_id: @match.id)
+    @bowler = FactoryGirl.create(:bowler, inning_id: @inning.id)
+    @bowler_attributes = FactoryGirl.attributes_for(:bowler, inning_id: @inning)
+  end
+
+  describe "GET 'index'" do
+    it "should get index" do
+      get :index, inning_id: @inning.id
+      should render_template(:index)
+    end
+  end
+
+  describe "GET 'show'" do
+    it "should get show" do
+      get :show
+      should render_template(:show)
+    end
+  end
+
+#  describe "GET 'new'" do
+#    it "should get new" do
+#      get :new, inning_id: @inning.id
+#      should render_template(:new)
+#    end
+#  end
+
+
+
+  describe "GET 'create'" do
+    context "with valid attributes" do
+      it "creates a new bowler successfully" do
+        expect {
+          post :create, inning_id: @inning, bowler: @bowler_attributes
+        }.to change{Bowler.count}.by(1)
+      end
+      it "opens the new bowler" do
+        post :create, inning_id: @inning, bowler: @bowler_attributes
+        should redirect_to(Bowler.last)
+      end
+    end
+    context "with invalid attributes" do
+      before :each do
+        @match = FactoryGirl.create(:match)
+        @inning = FactoryGirl.create(:inning, match_id: @match.id)
+        @bowler_name_attrib = FactoryGirl.attributes_for(:bowler, inning_id: @inning, name: nil)
+      end
+      it "does not create a new bowler successfully without name" do
+        expect {
+          post :create, inning_id: @inning, bowler: @bowler_name_attrib
+        }.to_not change{Bowler.count}
+      end
+      it "re-opens the new page" do
+        post :create, inning_id: @inning, bowler: @bowler_name_attrib
+        should render_template(:new)
+      end
+    end
+  end
+
+  describe "GET 'edit'" do
+    it "should get edit" do
+      get :edit, id: @bowler.id
+      should render_template(:edit)
+    end
+  end
+
+  describe "GET 'update'" do
+    context "valid attribute updates" do
+      it "should change the bowler attributes" do
+        put :update, id: @bowler, bowler: FactoryGirl.attributes_for(:bowler, name: "J. Bloggs", overs: 1, runs: 3, wickets: 0, wides: 0, no_balls: 0, maidens: 0)
+        @bowler.reload
+        @bowler.name.should eq("J. Bloggs")
+        @batter.overs.should eq(1)
+        @batter.runs.should eq(3)
+        @batter.wicket.should eq(0)
+        @batter.wides.should eq(0)
+        @batter.no_balls.should eq(0)
+        @batter.maidens.should eq(0)
+      end
+      it "should redirect to the updated batsman" do
+        put :update, id: @bowler, bowler: FactoryGirl.attributes_for(:bowler)
+        should redirect_to(@bowler)
+      end
+    end
+    context "invalid attribute updates" do
+      it "should not change the batsman attributes" do
+        put :update, id: @bowler, bowler: FactoryGirl.attributes_for(:bowler, name: nil, overs: 1, runs: 3, wickets: 0, wides: 0, no_balls: 0, maidens: 0)
+        @bowler.reload
+        @bowler.name.should eq("MyString")
+        @batter.overs.should eq(4)
+        @batter.runs.should eq(7)
+        @batter.wicket.should eq(1)
+        @batter.wides.should eq(2)
+        @batter.no_balls.should eq(3)
+        @batter.maidens.should eq(0)
+      end
+      it "should re-render the edit page" do
+        put :update, id: @bowler, bowler: FactoryGirl.attributes_for(:bowler)
+        should render_template(:edit, @bowler.id)
+      end
+    end
+  end
+
+  describe "GET 'delete'" do
+    it "should delete the inning" do
+      expect {
+          delete :destroy, id: @bowler
+        }.to change{Bowler.count}.by(-1)
+    end
+    it "should redirect to the innings page" do
+      delete :destroy, id: @bowler
+      get :index, inning_id: @inning.id
+      should render_template(:index)
+    end
+  end
+
+------------------------------------------------------------------------------------------------------
+
+  before_action :set_inning
+  before_action :set_bowler, only: [:show, :edit, :update, :destroy]
+
+  def index
+    @bowlers = @inning.bowlers
+  end
+  def show
+  end
+  
+  def new
+    @bowler = @inning.bowlers.new
+  end
+  def create
+    @bowler = @inning.bowlers.new(bowler_params)
+
+    respond_to do |format|
+      if @bowler.save
+        format.html { redirect_to inning_bowlers_url, notice: 'Bowler was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @bowler }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @bowler.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def edit
+  end
+
+  def update
+    respond_to do |format|
+      if @bowler.update(bowler_params)
+        format.html { redirect_to bowler_url, notice: 'Bowler was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render :edit }
+        format.json { render json: @bowler.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def destroy
+    @id = @bowler.inning_id
+    @bowler.destroy
+    respond_to do |format|
+      format.html { redirect_to inning_bowlers_path(@id), notice: 'Bowler deleted successfully.' }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    def set_bowler
+      @bowler = Bowler.find_by_id(params[:id])
+    end
+    def set_inning
+      if params[:inning_id]
+        @inning = Inning.find_by_id(params[:inning_id])
+      end
+    end
+    def bowler_params
+      params.require(:bowler).permit(:name, :overs, :runs, :wickets, :wides, :no_balls, :maidens, :inning_id)
+    end
+
+--------------------------------------------------------------------------------------------------------
+
+  belongs_to :inning
+  has_many :overs
+  
+  validates :name, presence: true
+
+---------------------------------------------------------------------------------------------------------
+
+  context "relationships" do
+    it {should belong_to(:inning)}
+    it {should have_many(:overs)}
+  end
+  context "validations" do
+    it {should validate_presence_of(:name)}    
+  end
+

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Batsman do
+describe Batter do
 
   context "relationships" do
     it {should belong_to(:inning)}
@@ -8,4 +8,5 @@ describe Batsman do
   context "validations" do
     it {should validate_presence_of(:name)}    
   end
+  
 end

@@ -1,0 +1,26 @@
+<h2>Batsman Details</h2>
+
+<p id="notice"><%= notice %></p>
+
+<%= link_to "Back", inning_batters_path(@batter.inning_id) %>&nbsp;&nbsp;
+<%= link_to "Edit", edit_batter_path(@batter.id) %>&nbsp;&nbsp;
+
+<table width="100%">
+	<tr><td><b>Name</b></td></tr>
+	<tr><td><%= @batter.name %></td></tr>
+	<tr><td><b>Ball History</b></td></tr>
+	<tr><td><%= @batter.ball_history %></td></tr>
+	<tr><td><b>Balls Faced</b></td></tr>
+	<tr><td><%= @batter.balls_faced %></td></tr>
+	<tr><td><b>Runs</b></td></tr>
+	<tr><td><%= @batter.runs %></td></tr>
+	<tr><td><b>Fours</b></td></tr>
+	<tr><td><%= @batter.fours %></td></tr>
+	<tr><td><b>Sixes</b></td></tr>
+	<tr><td><%= @batter.sixes %></td></tr>
+	<tr><td><b>How Out</b></td></tr>
+	<tr><td><%= @batter.how_out %></td></tr>
+	<tr><td><b>Bowler</b></td></tr>
+	<tr><td><%= @batter.bowler %></td></tr>
+</table>
+

@@ -1,7 +1,7 @@
-class Batsman < ActiveRecord::Base
-  
+class Batter < ActiveRecord::Base
+
   belongs_to :inning
-  
+
   validates :name, presence: true
   
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140905012003) do
+ActiveRecord::Schema.define(version: 20140911011643) do
 
   create_table "balls", force: true do |t|
     t.integer  "runs"
@@ -29,23 +29,25 @@ ActiveRecord::Schema.define(version: 20140905012003) do
 
   add_index "balls", ["over_id"], name: "index_balls_on_over_id"
 
-  create_table "batsmen", force: true do |t|
+  create_table "batters", force: true do |t|
+    t.string   "name"
     t.integer  "runs"
-    t.integer  "balls_faced"
+    t.integer  "balls_faced",  limit: 255
     t.integer  "fours"
     t.integer  "sixes"
-    t.string   "how_out"
+    t.integer  "how_out"
+    t.string   "bowler"
     t.string   "ball_history"
     t.integer  "inning_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
   end
 
-  add_index "batsmen", ["inning_id"], name: "index_batsmen_on_inning_id"
+  add_index "batters", ["inning_id"], name: "index_batters_on_inning_id"
 
   create_table "bowlers", force: true do |t|
-    t.integer  "overs"
+    t.string   "name"
+    t.integer  "overs_bowled"
     t.integer  "runs"
     t.integer  "wickets"
     t.integer  "wides"

@@ -1,0 +1,12 @@
+<%= simple_form_for [@inning, @batter] do |f| %>
+	<%= f.error_notification %>
+	<%= f.input(:name) %>
+	<%= f.input(:ball_history) %>
+	<%= f.input(:balls_faced) %>
+	<%= f.input(:runs) %>
+	<%= f.input(:fours) %>
+	<%= f.input(:sixes) %>
+	<%= f.input(:how_out) %>
+	<%= f.input(:bowler) %>
+	<%= f.button(:submit) %>
+<% end %>
