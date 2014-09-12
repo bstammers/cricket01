@@ -1,0 +1,42 @@
+<h2>Overs</h2>
+
+<p id="notice"><%= notice %></p>
+
+<%= link_to "Back", match_innings_path(session[:match]) %>&nbsp;&nbsp;
+<%= link_to "New Over", new_inning_over_path(session[:inning]) %>&nbsp;&nbsp;
+
+<table width="100%">
+	<tr>
+		<th>&nbsp;</th>
+		<th>Bowler Name</th>
+		<th>Bowler Over</th>
+		<th>Runs</th>
+		<th>Wides</th>
+		<th>No Balls</th>
+		<th>Byes</th>
+		<th>Leg Byes</th>
+		<th>Wickets</th>
+		<th>Score</th>
+	</tr>
+	<% @overs.each do |over| %>
+		<tr>
+			<td><%= over.id %></td>
+			<td><%= over.bowler_name %></td>
+			<td><%= over.bowler_over %></td>
+			<td><%= over.runs %></td>
+			<td><%= over.wides %></td>
+			<td><%= over.no_balls %></td>
+			<td><%= over.byes %></td>
+			<td><%= over.leg_byes %></td>
+			<td><%= over.wickets %></td>
+			<td><%= over.score %></td>
+			<td>
+				<%= link_to "Show", over_path(over.id) %>&nbsp;&nbsp;
+				<%= link_to "Edit", edit_over_path(over.id) %>&nbsp;&nbsp;
+				<%= link_to "Delete", over_path(over.id), method: :delete %>&nbsp;&nbsp;
+				<%= link_to "Deliveries", over_balls_path(over.id) %>&nbsp;&nbsp;
+			</td>
+		</tr>
+	<% end %>
+</table>
+

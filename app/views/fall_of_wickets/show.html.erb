@@ -1,0 +1,18 @@
+<h2>FOW Details</h2>
+
+<p id="notice"><%= notice %></p>
+
+<%= link_to "Back", inning_fall_of_wickets_path(@fow.inning_id) %>&nbsp;&nbsp;
+<%= link_to "Edit", edit_fall_of_wicket_path(@fow.id) %>&nbsp;&nbsp;
+
+<table width="100%">
+	<tr><td><b>Wicket</b></td></tr>
+	<tr><td><%= @fow.wicket %></td></tr>
+	<tr><td><b>Batsman Out</b></td></tr>
+	<tr><td><%= @fow.batsman_out %></td></tr>
+	<tr><td><b>Batsman Not Out</b></td></tr>
+	<tr><td><%= @fow.batsman_not_out %></td></tr>
+	<tr><td><b>Partnership</b></td></tr>
+	<tr><td><%= @fow.partnership %></td></tr>
+</table>
+

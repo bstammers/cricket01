@@ -27,7 +27,9 @@
 				<%= link_to "Edit", edit_inning_path(inning.id) %>&nbsp;&nbsp;
 				<%= link_to "Delete", inning_path(inning.id), method: :delete %>&nbsp;&nbsp;
 				<%= link_to "Batsmen", inning_batters_path(inning.id) %>&nbsp;&nbsp;
-				<%= link_to "Bowlers", inning_bowlers_path(inning.id) %>
+				<%= link_to "Bowlers", inning_bowlers_path(inning.id) %>&nbsp;&nbsp;
+				<%= link_to "Overs", inning_overs_path(inning.id) %>&nbsp;&nbsp;
+				<%= link_to "FOW", inning_fall_of_wickets_path(inning.id) %>&nbsp;&nbsp;
 			</td>
 		</tr>
 	<% end %>

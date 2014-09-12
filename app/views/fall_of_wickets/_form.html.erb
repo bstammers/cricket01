@@ -1,0 +1,8 @@
+<%= simple_form_for [@inning, @fow] do |f| %>
+	<%= f.error_notification %>
+	<%= f.input(:wicket) %>
+	<%= f.input(:batsman_out) %>
+	<%= f.input(:batsman_not_out) %>
+	<%= f.input(:partnership) %>
+	<%= f.button(:submit) %>
+<% end %>

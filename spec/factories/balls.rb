@@ -2,6 +2,7 @@
 
 FactoryGirl.define do
   factory :ball do
+    over_ball "MyString"
     runs 1
     how_out "MyString"
     caught_by "MyString"

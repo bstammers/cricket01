@@ -1,0 +1,13 @@
+<%= simple_form_for [@over,@ball] do |f| %>
+	<%= f.error_notification %>
+	<%= f.input(:over_ball) %>
+	<%= f.input(:runs) %>
+	<%= f.input(:how_out) %>
+	<%= f.input(:caught_by) %>
+	<%= f.input(:striker) %>
+	<%= f.input(:non_striker) %>
+	<%= f.input(:sundries) %>
+	<%= f.input(:sundries_type) %>
+	<%= f.input(:location) %>
+	<%= f.button(:submit) %>
+<% end %>

@@ -1,6 +1,8 @@
-class CreateMatchOvers < ActiveRecord::Migration
+class CreateOvers < ActiveRecord::Migration
   def change
-    create_table :match_overs do |t|
+    create_table :overs do |t|
+      t.string :bowler_name
+      t.string :bowler_over
       t.integer :runs
       t.integer :wides
       t.integer :no_balls
@@ -8,7 +10,7 @@ class CreateMatchOvers < ActiveRecord::Migration
       t.integer :leg_byes
       t.integer :wickets
       t.string :score
-      t.references :match, index: true
+      t.references :inning, index: true
 
       t.timestamps
     end

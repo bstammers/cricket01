@@ -1,0 +1,41 @@
+<h2>Deliveries</h2>
+
+<p id="notice"><%= notice %></p>
+
+<%= link_to "Back", inning_overs_path(session[:inning]) %>&nbsp;&nbsp;
+<%= link_to "New Delivery", new_over_ball_path(session[:over]) %>&nbsp;&nbsp;
+
+<table width="100%">
+	<tr>
+		<th>&nbsp;</th>
+		<th>Over Ball</th>
+		<th>Runs</th>
+		<th>How Out</th>
+		<th>Caught By</th>
+		<th>Striker</th>
+		<th>Non-Striker</th>
+		<th>Sundries</th>
+		<th>Sundries Type</th>
+		<th>Location</th>
+	</tr>
+	<% @balls.each do |ball| %>
+		<tr>
+			<td><%= ball.id %></td>
+			<td><%= ball.over_ball %></td>
+			<td><%= ball.runs %></td>
+			<td><%= ball.how_out %></td>
+			<td><%= ball.caught_by %></td>
+			<td><%= ball.striker %></td>
+			<td><%= ball.non_striker %></td>
+			<td><%= ball.sundries %></td>
+			<td><%= ball.sundries_type %></td>
+			<td><%= ball.location %></td>
+			<td>
+				<%= link_to "Show", ball_path(ball.id) %>&nbsp;&nbsp;
+				<%= link_to "Edit", edit_ball_path(ball.id) %>&nbsp;&nbsp;
+				<%= link_to "Delete", ball_path(ball.id), method: :delete %>&nbsp;&nbsp;
+			</td>
+		</tr>
+	<% end %>
+</table>
+

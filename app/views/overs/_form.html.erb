@@ -1,0 +1,13 @@
+<%= simple_form_for [@inning, @over] do |f| %>
+	<%= f.error_notification %>
+	<%= f.input(:bowler_name) %>
+	<%= f.input(:bowler_over) %>
+	<%= f.input(:runs) %>
+	<%= f.input(:wides) %>
+	<%= f.input(:no_balls) %>
+	<%= f.input(:byes) %>
+	<%= f.input(:leg_byes) %>
+	<%= f.input(:wickets) %>
+	<%= f.input(:score) %>
+	<%= f.button(:submit) %>
+<% end %>

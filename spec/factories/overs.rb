@@ -2,6 +2,8 @@
 
 FactoryGirl.define do
   factory :over do
+    bowler_name "MyString"
+    bowler_over "MyString"
     runs 1
     wides 1
     no_balls 1
@@ -9,6 +11,6 @@ FactoryGirl.define do
     leg_byes 1
     wickets 1
     score "MyString"
-    bowler nil
+    inning nil
   end
 end

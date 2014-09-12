@@ -1,0 +1,31 @@
+<h2>Fall Of Wickets</h2>
+
+<p id="notice"><%= notice %></p>
+
+<%= link_to "Back", match_innings_path(session[:match]) %>&nbsp;&nbsp;
+<%= link_to "New FOW", new_inning_fall_of_wicket_path(session[:inning]) %>&nbsp;&nbsp;
+
+<table width="100%">
+	<tr>
+		<th>&nbsp;</th>
+		<th>Wicket</th>
+		<th>Batsman Out</th>
+		<th>Batsmn Not Out</th>
+		<th>Partnership</th>
+	</tr>
+	<% @fows.each do |fow| %>
+		<tr>
+			<td><%= fow.id %></td>
+			<td><%= fow.wicket %></td>
+			<td><%= fow.batsman_out %></td>
+			<td><%= fow.batsman_not_out %></td>
+			<td><%= fow.partnership %></td>
+			<td>
+				<%= link_to "Show", fall_of_wicket_path(fow.id) %>&nbsp;&nbsp;
+				<%= link_to "Edit", edit_fall_of_wicket_path(fow.id) %>&nbsp;&nbsp;
+				<%= link_to "Delete", fall_of_wicket_path(fow.id), method: :delete %>&nbsp;&nbsp;
+			</td>
+		</tr>
+	<% end %>
+</table>
+

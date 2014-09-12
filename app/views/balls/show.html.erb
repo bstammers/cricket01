@@ -1,0 +1,28 @@
+<h2>Delivery Details</h2>
+
+<p id="notice"><%= notice %></p>
+
+<%= link_to "Back", over_balls_path(@ball.over_id) %>&nbsp;&nbsp;
+<%= link_to "Edit", edit_ball_path(@ball.id) %>&nbsp;&nbsp;
+
+<table width="100%">
+	<tr><td><b>Over Ball</b></td></tr>
+	<tr><td><%= @ball.over_ball %></td></tr>
+	<tr><td><b>Runs</b></td></tr>
+	<tr><td><%= @ball.runs %></td></tr>
+	<tr><td><b>How Out</b></td></tr>
+	<tr><td><%= @ball.how_out %></td></tr>
+	<tr><td><b>Caught By</b></td></tr>
+	<tr><td><%= @ball.caught_by %></td></tr>
+	<tr><td><b>Striker</b></td></tr>
+	<tr><td><%= @ball.striker %></td></tr>
+	<tr><td><b>Non-Striker</b></td></tr>
+	<tr><td><%= @ball.non_striker %></td></tr>
+	<tr><td><b>Sundries</b></td></tr>
+	<tr><td><%= @ball.sundries %></td></tr>
+	<tr><td><b>Sundries Type</b></td></tr>
+	<tr><td><%= @ball.sundries_type %></td></tr>
+	<tr><td><b>Location</b></td></tr>
+	<tr><td><%= @ball.location %></td></tr>
+</table>
+

@@ -1,0 +1,28 @@
+<h2>Over Details</h2>
+
+<p id="notice"><%= notice %></p>
+
+<%= link_to "Back", inning_overs_path(@over.inning_id) %>&nbsp;&nbsp;
+<%= link_to "Edit", edit_over_path(@over.id) %>&nbsp;&nbsp;
+
+<table width="100%">
+	<tr><td><b>Bowler Name</b></td></tr>
+	<tr><td><%= @over.bowler_name %></td></tr>
+	<tr><td><b>Bowler Over</b></td></tr>
+	<tr><td><%= @over.bowler_over %></td></tr>
+	<tr><td><b>Runs</b></td></tr>
+	<tr><td><%= @over.runs %></td></tr>
+	<tr><td><b>Wides</b></td></tr>
+	<tr><td><%= @over.wides %></td></tr>
+	<tr><td><b>No Balls</b></td></tr>
+	<tr><td><%= @over.no_balls %></td></tr>
+	<tr><td><b>Byes</b></td></tr>
+	<tr><td><%= @over.byes %></td></tr>
+	<tr><td><b>Leg Byes</b></td></tr>
+	<tr><td><%= @over.leg_byes %></td></tr>
+	<tr><td><b>Wickets</b></td></tr>
+	<tr><td><%= @over.wickets %></td></tr>
+	<tr><td><b>Score</b></td></tr>
+	<tr><td><%= @over.score %></td></tr>
+</table>
+

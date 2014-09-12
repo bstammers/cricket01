@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140911011643) do
+ActiveRecord::Schema.define(version: 20140912012735) do
 
   create_table "balls", force: true do |t|
     t.integer  "runs"
@@ -25,8 +25,10 @@ ActiveRecord::Schema.define(version: 20140911011643) do
     t.integer  "over_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "over_ball"
   end
 
+  add_index "balls", ["over_ball"], name: "index_balls_on_over_ball"
   add_index "balls", ["over_id"], name: "index_balls_on_over_id"
 
   create_table "batters", force: true do |t|
@@ -84,21 +86,6 @@ ActiveRecord::Schema.define(version: 20140911011643) do
 
   add_index "innings", ["match_id"], name: "index_innings_on_match_id"
 
-  create_table "match_overs", force: true do |t|
-    t.integer  "runs"
-    t.integer  "wides"
-    t.integer  "no_balls"
-    t.integer  "byes"
-    t.integer  "leg_byes"
-    t.integer  "wickets"
-    t.string   "score"
-    t.integer  "match_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "match_overs", ["match_id"], name: "index_match_overs_on_match_id"
-
   create_table "matches", force: true do |t|
     t.string   "home_team"
     t.string   "away_team"
@@ -116,6 +103,8 @@ ActiveRecord::Schema.define(version: 20140911011643) do
   end
 
   create_table "overs", force: true do |t|
+    t.string   "bowler_name"
+    t.string   "bowler_over"
     t.integer  "runs"
     t.integer  "wides"
     t.integer  "no_balls"
@@ -123,11 +112,11 @@ ActiveRecord::Schema.define(version: 20140911011643) do
     t.integer  "leg_byes"
     t.integer  "wickets"
     t.string   "score"
-    t.integer  "bowler_id"
+    t.integer  "inning_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "overs", ["bowler_id"], name: "index_overs_on_bowler_id"
+  add_index "overs", ["inning_id"], name: "index_overs_on_inning_id"
 
 end

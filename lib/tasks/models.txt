@@ -19,7 +19,7 @@ OVER
 	- score
 	--- HAS MANY BALLS
 	--- BELONGS TO BOWLER
-	--- BELONGS TO INNINGS  -- polymorphinc association
+	--- BELONGS TO INNINGS  -- polymorphic association
 
 BOWLER
 	- overs

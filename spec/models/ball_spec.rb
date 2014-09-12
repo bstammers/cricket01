@@ -6,6 +6,6 @@ describe Ball do
     it {should belong_to(:over)}
   end
   context "validations" do
-    
+    it {should validate_presence_of(:over_ball)}    
   end
 end

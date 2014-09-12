@@ -34,11 +34,13 @@ DONE	9.	Do browser based tests for all actions for verification, including inval
 
 V1.0 - SECOND CYCLE
 
+***  Still some errors on rspec tests even though it functions as expected ***
+
 DONE	1.	Create rspec tests for innings model
 DONE	2.	Add validations for innings
-Non-Functional		3.	Create controller rspec tests  
+DONE	3.	Create controller rspec tests  
 DONE	4.	Create controller to pass rpsec tests
-***			a. Issues with edit and new.  Error appearing that i can't debug
+DONE		a. Issues with edit and new.  Error appearing that i can't debug
 DONE	5.	Set up default views for innings
 DONE	6.	Add links to innings from match entry...in show and index
 
@@ -46,7 +48,6 @@ DONE	6.	Add links to innings from match entry...in show and index
 v1.0 - THIRD CYCLE
 
 ***  Still some errors on rspec tests even though it functions as expected ***
-***  WORK OUT HOW TO GET NEW LINK FOR BATSMAN AND BOWLER TO WORK FROM INDEX ***
 
 DONE	1.	Add validations for batsman model to rpsec.
 DONE	2.	Update batsman model to pass rspec
@@ -54,8 +55,40 @@ DONE	3.	Create blank batsman controller
 DONE	4.	Create rspec tests for batsman controller
 DONE	5.	Add new methods to batsman controller one at a time to pass rspec tests
 DONE	6.	Create blank bowler controller
-		7.	Create rspec tests for bowler controller
-		8.	Add new methods to bowler controller one at a time to pass rspec tests
+DONE	7.	Create rspec tests for bowler controller
+DONE	8.	Add new methods to bowler controller one at a time to pass rspec tests
 		
+------------------------------------------------------------------------------------------------
+v1.0 - FOURTH CYCLE
+
+***  Still some errors on rspec tests even though it functions as expected ***
+
+DONE	2.	Add validations for over model to rspec
+DONE	3.	Update over model to pass rpsec
+DONE	4.	Create blank over controller
+DONE	5.	Create rspec tests for over controller
+DONE	6.	Add new methods to over controller one at a time to pass rspec tests
+DONE	7.	Add validations for FOW model to rspec
+DONE	8.	Update FOW model to pass rpsec
+DONE	9.	Create blank FOW controller
+DONE	10.	Create rspec tests for FOW controller
+DONE	11.	Add new methods to FOW controller one at a time to pass rspec tests
+DONE	12.	Add validations for ball model to rspec
+DONE 	13.	Update ball model to pass rpsec
+DONE	14.	Create blank ball controller
+DONE	15.	Create rspec tests for ball controller
+DONE	16.	Add new methods to ball controller one at a time to pass rspec tests
+	
+--------------------------------------------------------------------------------------------------
+v1.0 - FIFTH CYCLE
+
+	1.	Add scoresheet static page and stylesheets
+	2.	Integrate AJAX into site and add to match component of scoresheet
+	3.	Integrate AJAX into inning component of scoresheet
+	4.	Integrate AJAX into batsman component of scoresheet
+	5.	Integrate AJAX into bowler component of scoresheet
+
+
+-------------------------------------------------------------------------------------------------
 
 	
