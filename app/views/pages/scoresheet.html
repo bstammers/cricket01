@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>scoresheet</title>
+<!--		<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="js/ui/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/test-scripts.js"></script>
+		<link rel="stylesheet" href="js/themes/pepper-grinder/jquery-ui.css" />		
+		<link rel="stylesheet" href="styles.css" /> -->
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	</head>
+
+	<body>
+		<div>
+			<span class="dtlsSpace">&nbsp;</span><span id="dtlsColl" class="sectionUp">&nbsp;</span><span id="dtlsExp" class="sectionDown">&nbsp;</span><span width="48%">&nbsp;</span>		
+		</div>
+		<header>
+			<table id="matchDtls">
+				<tbody>
+					<tr>
+						<td class="matchLabel">Competition:</td>
+						<td class="matchField"><input type="text" id="comp" name="comp"></td>
+						<td class="matchLabel">Grade:</td>
+						<td class="matchField"><input type="text" id="grade" name="grade"></td>
+					</tr>
+					<tr>
+						<td class="matchLabel">Home team:</td>
+						<td class="matchField"><input type="text" id="home" name="home"></td>
+						<td class="matchLabel">Away team:</td>
+						<td class="matchField"><input type="text" id="away" name="away"></td>
+					</tr>
+					<tr>
+						<td class="matchLabel">Match date:</td>
+						<td class="matchField"><input type="date" id="matchdate" name="matchdate"></td>
+						<td class="matchLabel">Ground:</td>
+						<td class="matchField"><input type="text" id="ground" name="ground"></td>
+					</tr>
+					<tr>
+						<td class="matchLabel">Innings of:</td>
+						<td class="matchField" colspan=3><input type="text" id="inningsof" name="inningsof"></td>
+					</tr>
+				</tbody>
+			</table>
+		</header>
+		<section id="batDtls">
+			<table>
+				<thead>
+					<tr>
+						<td class="batNames">Batsman</td>
+						<td class="batDtls">Innings</td>
+						<td class="batOut">How Out</td>
+						<td class="batRun">4s</td>
+						<td class="batRun">6s</td>
+						<td class="batRun">Runs</td>					
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td id="batName01" class="batNames">
+							1.&nbsp;&nbsp;&nbsp;
+							<input type="text" id="batN01" name="batN01" style="width: 75%;">
+						</td>
+						<td class="batDtls" id="batDtls01"></td>
+						<td class="batOut" id="batOut01"></td>
+						<td class="batRun" id="bat401"></td>
+						<td class="batRun" id="bat601"></td>
+						<td class="batRun" id="batRun01"></td>
+					</tr>
+					<tr>
+						<td id="batName02" class="batNames">
+							2.&nbsp;&nbsp;&nbsp;
+							<input type="text" id="batN02" name="batN02" style="width: 75%;">
+						</td>
+						<td class="batDtls" id="batDtls02"></td>
+						<td class="batOut" id="batOut02"></td>
+						<td class="batRun" id="bat402"></td>
+						<td class="batRun" id="bat602"></td>
+						<td class="batRun" id="batRun02"></td>
+					</tr>
+					<tr>
+						<td id="batName03" class="batNames">
+							3.&nbsp;&nbsp;&nbsp;
+							<input type="text" id="batN03" name="batN03" style="width: 75%;">
+						</td>
+						<td class="batDtls" id="batDtls03"></td>
+						<td class="batOut" id="batOut03"></td>
+						<td class="batRun" id="bat403"></td>
+						<td class="batRun" id="bat603"></td>
+						<td class="batRun" id="batRun03"></td>
+					</tr>
+					<tr>
+						<td id="batName04" class="batNames">
+							4.&nbsp;&nbsp;&nbsp;
+							<input type="text" id="batN04" name="batN04" style="width: 75%;">
+						</td>
+						<td class="batDtls" id="batDtls04"></td>
+						<td class="batOut" id="batOut04"></td>
+						<td class="batRun" id="bat404"></td>
+						<td class="batRun" id="bat604"></td>
+						<td class="batRun" id="batRun04"></td>
+					</tr>
+					<tr>
+						<td id="batName05" class="batNames">
+							5.&nbsp;&nbsp;&nbsp;
+							<input type="text" id="batN05" name="batN05" style="width: 75%;">
+						</td>
+						<td class="batDtls" id="batDtls05"></td>
+						<td class="batOut" id="batOut05"></td>
+						<td class="batRun" id="bat405"></td>
+						<td class="batRun" id="bat605"></td>
+						<td class="batRun" id="batRun05"></td>
+					</tr>
+					<tr>
+						<td id="batName06" class="batNames">
+							6.&nbsp;&nbsp;&nbsp;
+							<input type="text" id="batN06" name="batN06" style="width: 75%;">
+						</td>
+						<td class="batDtls" id="batDtls06"></td>
+						<td class="batOut" id="batOut06"></td>
+						<td class="batRun" id="bat406"></td>
+						<td class="batRun" id="bat606"></td>
+						<td class="batRun" id="batRun06"></td>
+					</tr>
+					<tr>
+						<td id="batName07" class="batNames">
+							7.&nbsp;&nbsp;&nbsp;
+							<input type="text" id="batN07" name="batN07" style="width: 75%;">
+						</td>
+						<td class="batDtls" id="batDtls07"></td>
+						<td class="batOut" id="batOut07"></td>
+						<td class="batRun" id="bat407"></td>
+						<td class="batRun" id="bat607"></td>
+						<td class="batRun" id="batRun07"></td>
+					</tr>
+					<tr>
+						<td id="batName08" class="batNames">
+							8.&nbsp;&nbsp;&nbsp;
+							<input type="text" id="batN08" name="batN08" style="width: 75%;">
+						</td>
+						<td class="batDtls" id="batDtls08"></td>
+						<td class="batOut" id="batOut08"></td>
+						<td class="batRun" id="bat408"></td>
+						<td class="batRun" id="bat608"></td>
+						<td class="batRun" id="batRun08"></td>
+					</tr>
+					<tr>
+						<td id="batName09" class="batNames">
+							9.&nbsp;&nbsp;&nbsp;
+							<input type="text" id="batN09" name="batN09" style="width: 75%;">
+						</td>
+						<td class="batDtls" id="batDtls09"></td>
+						<td class="batOut" id="batOut09"></td>
+						<td class="batRun" id="bat409"></td>
+						<td class="batRun" id="bat609"></td>
+						<td class="batRun" id="batRun09"></td>
+					</tr>
+					<tr>
+						<td id="batName10" class="batNames">
+							10.&nbsp;
+							<input type="text" id="batN10" name="batN10" style="width: 75%;">
+						</td>
+						<td class="batDtls" id="batDtls10"></td>
+						<td class="batOut" id="batOut10"></td>
+						<td class="batRun" id="bat410"></td>
+						<td class="batRun" id="bat610"></td>
+						<td class="batRun" id="batRun10"></td>
+					</tr>
+					<tr>
+						<td id="batName11" class="batNames">
+							11.&nbsp;
+							<input type="text" id="batN11" name="batN11" style="width: 75%;">
+						</td>
+						<td class="batDtls" id="batDtls11"></td>
+						<td class="batOut" id="batOut11"></td>
+						<td class="batRun" id="bat411"></td>
+						<td class="batRun" id="bat611"></td>
+						<td class="batRun" id="batRun11"></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section id="summary">		
+			<table>
+				<tbody>
+					<tr>
+						<td rowspan="2" class="summaryLabel">SCORE:</td>
+						<td rowspan="2" class="summaryScore">&nbsp;</td>
+						<td rowspan="2" class="summaryLabel">SUNDRIES:</td>
+						<td class="summarySundry">Wides</td>
+						<td class="summarySundry">No Balls</td>
+						<td class="summarySundry">Byes</td>
+						<td class="summarySundry">LegByes</td>
+						<td class="summarySundry">TOTAL</td>
+						<td rowspan="2" id="FoW">FALL OF WICKETS</td>
+					</tr>
+					<tr>
+						<td class="summarySundry" id="sundW">&nbsp;</td>
+						<td class="summarySundry" id="sundNB">&nbsp;</td>
+						<td class="summarySundry" id="sundB">&nbsp;</td>
+						<td class="summarySundry" id="sundLB">&nbsp;</td>
+						<td class="summarySundry" id="sundTot">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>		
+		</section>
+		<section id="bowlDtls">						
+			<table id="bowlTable">
+				<thead>
+					<tr>
+						<td id="bowlName01" class="bowlNames">Bowler</td>
+						<td class="bowlOver" id="over01">1</td>
+						<td class="bowlOver" id="over02">2</td>
+						<td class="bowlOver" id="over03">3</td>
+						<td class="bowlOver" id="over04">4</td>
+						<td class="bowlOver" id="over05">5</td>
+						<td class="bowlOver" id="over06">6</td>
+						<td class="bowlOver" id="over07">7</td>
+						<td class="bowlOver" id="over08">8</td>
+						<td class="bowlOver" id="over09">9</td>
+						<td class="bowlOver" id="over10">10</td>
+						<td class="bowlOver" id="over11">11</td>
+						<td class="bowlOver" id="over12">12</td>
+						<td class="bowlOver" id="over13">13</td>
+						<td class="bowlOver" id="over14">14</td>
+						<td class="bowlOver" id="over15">15</td>
+						<td class="bowlOver" id="over16">16</td>
+						<td class="bowlOver" id="over17">17</td>
+						<td class="bowlOver" id="over18">18</td>
+						<td class="bowlOver" id="over19">19</td>
+						<td class="bowlOver" id="over20">20</td>
+						<td class="bowlOver" id="over21">21</td>
+						<td class="bowlOver" id="over22">22</td>
+						<td class="bowlOver" id="over23">23</td>
+						<td class="bowlOver" id="over24">24</td>
+						<td class="bowlOver" id="over25">25</td>
+						<td class="bowlOverTot">Overs</td>
+						<td class="bowlOverTot">Mdns</td>
+						<td class="bowlOverTot">Wides</td>
+						<td class="bowlOverTot">NBs</td>
+						<td class="bowlOverTot">Runs</td>
+						<td class="bowlOverTot">Wkts</td>
+					</tr>				
+				</thead>
+				<tbody>
+					<tr>
+						<td id="bowlName01" class="bowlNames">
+							1.&nbsp;&nbsp;&nbsp;
+							<input type="text" id="bowlN01" name="bowlN01" style="width: 75%;">
+						</td>
+						<td class="bowlOver" id="over01">
+							<input type="text" id="bowlOver0101"> 
+						</td>
+						<td class="bowlOver" id="over02">
+							<input type="text" id="bowlOver0102"> 
+						</td>
+						<td class="bowlOver" id="over03">
+							<input type="text" id="bowlOver0103"> 
+						</td>
+						<td class="bowlOver" id="over04">
+							<input type="text" id="bowlOver0104"> 
+						</td>
+						<td class="bowlOver" id="over05">
+							<input type="text" id="bowlOver0105"> 
+						</td>
+						<td class="bowlOver" id="over06">
+							<input type="text" id="bowlOver0106"> 
+						</td>
+						<td class="bowlOver" id="over07">
+							<input type="text" id="bowlOver0107"> 
+						</td>
+						<td class="bowlOver" id="over08">
+							<input type="text" id="bowlOver0108"> 
+						</td>
+						<td class="bowlOver" id="over09">
+							<input type="text" id="bowlOver0109"> 
+						</td>
+						<td class="bowlOver" id="over10">
+							<input type="text" id="bowlOver0110"> 
+						</td>
+						<td class="bowlOver" id="over11">
+							<input type="text" id="bowlOver0111"> 
+						</td>
+						<td class="bowlOver" id="over12">
+							<input type="text" id="bowlOver0112"> 
+						</td>
+						<td class="bowlOver" id="over13">
+							<input type="text" id="bowlOver0113"> 
+						</td>
+						<td class="bowlOver" id="over14">
+							<input type="text" id="bowlOver0114"> 
+						</td>
+						<td class="bowlOver" id="over15">
+							<input type="text" id="bowlOver0115"> 
+						</td>
+						<td class="bowlOver" id="over16">
+							<input type="text" id="bowlOver0116"> 
+						</td>
+						<td class="bowlOver" id="over17">
+							<input type="text" id="bowlOver0117"> 
+						</td>
+						<td class="bowlOver" id="over18">
+							<input type="text" id="bowlOver0118"> 
+						</td>
+						<td class="bowlOver" id="over19">
+							<input type="text" id="bowlOver0119"> 
+						</td>
+						<td class="bowlOver" id="over20">
+							<input type="text" id="bowlOver0120"> 
+						</td>
+						<td class="bowlOver" id="over21">
+							<input type="text" id="bowlOver0121"> 
+						</td>
+						<td class="bowlOver" id="over22">
+							<input type="text" id="bowlOver0122"> 
+						</td>
+						<td class="bowlOver" id="over23">
+							<input type="text" id="bowlOver0123"> 
+						</td>
+						<td class="bowlOver" id="over24">
+							<input type="text" id="bowlOver0124"> 
+						</td>
+						<td class="bowlOver" id="over25">
+							<input type="text" id="bowlOver0125"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlOverTot01"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlMdn01"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlWd01"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlNB01"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlRun01"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlWkt01"> 
+						</td>
+					</tr>
+					<tr>
+						<td id="bowlName02" class="bowlNames">
+							2.&nbsp;&nbsp;&nbsp;
+							<input type="text" id="bowlN02" name="bowlN02" style="width: 75%;">
+						</td>
+						<td class="bowlOver" id="over01">
+							<input type="text" id="bowlOver0201"> 
+						</td>
+						<td class="bowlOver" id="over02">
+							<input type="text" id="bowlOver0202"> 
+						</td>
+						<td class="bowlOver" id="over03">
+							<input type="text" id="bowlOver0203"> 
+						</td>
+						<td class="bowlOver" id="over04">
+							<input type="text" id="bowlOver0204"> 
+						</td>
+						<td class="bowlOver" id="over05">
+							<input type="text" id="bowlOver0205"> 
+						</td>
+						<td class="bowlOver" id="over06">
+							<input type="text" id="bowlOver0206"> 
+						</td>
+						<td class="bowlOver" id="over07">
+							<input type="text" id="bowlOver0207"> 
+						</td>
+						<td class="bowlOver" id="over08">
+							<input type="text" id="bowlOver0208"> 
+						</td>
+						<td class="bowlOver" id="over09">
+							<input type="text" id="bowlOver0209"> 
+						</td>
+						<td class="bowlOver" id="over10">
+							<input type="text" id="bowlOver0210"> 
+						</td>
+						<td class="bowlOver" id="over11">
+							<input type="text" id="bowlOver0211"> 
+						</td>
+						<td class="bowlOver" id="over12">
+							<input type="text" id="bowlOver0212"> 
+						</td>
+						<td class="bowlOver" id="over13">
+							<input type="text" id="bowlOver0213"> 
+						</td>
+						<td class="bowlOver" id="over14">
+							<input type="text" id="bowlOver0214"> 
+						</td>
+						<td class="bowlOver" id="over15">
+							<input type="text" id="bowlOver0215"> 
+						</td>
+						<td class="bowlOver" id="over16">
+							<input type="text" id="bowlOver0216"> 
+						</td>
+						<td class="bowlOver" id="over17">
+							<input type="text" id="bowlOver0217"> 
+						</td>
+						<td class="bowlOver" id="over18">
+							<input type="text" id="bowlOver0218"> 
+						</td>
+						<td class="bowlOver" id="over19">
+							<input type="text" id="bowlOver0219"> 
+						</td>
+						<td class="bowlOver" id="over20">
+							<input type="text" id="bowlOver0220"> 
+						</td>
+						<td class="bowlOver" id="over21">
+							<input type="text" id="bowlOver0221"> 
+						</td>
+						<td class="bowlOver" id="over22">
+							<input type="text" id="bowlOver0222"> 
+						</td>
+						<td class="bowlOver" id="over23">
+							<input type="text" id="bowlOver0223"> 
+						</td>
+						<td class="bowlOver" id="over24">
+							<input type="text" id="bowlOver0224"> 
+						</td>
+						<td class="bowlOver" id="over25">
+							<input type="text" id="bowlOver0225"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlOverTot02"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlMdn02"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlWd02"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlNB02"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlRun02"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlWkt02"> 
+						</td>
+					</tr>
+					<tr>
+						<td id="bowlName03" class="bowlNames">
+							3.&nbsp;&nbsp;&nbsp;
+							<input type="text" id="bowlN03" name="bowlN03" style="width: 75%;">
+						</td>
+						<td class="bowlOver" id="over01">
+							<input type="text" id="bowlOver0301"> 
+						</td>
+						<td class="bowlOver" id="over02">
+							<input type="text" id="bowlOver0302"> 
+						</td>
+						<td class="bowlOver" id="over03">
+							<input type="text" id="bowlOver0303"> 
+						</td>
+						<td class="bowlOver" id="over04">
+							<input type="text" id="bowlOver0304"> 
+						</td>
+						<td class="bowlOver" id="over05">
+							<input type="text" id="bowlOver0305"> 
+						</td>
+						<td class="bowlOver" id="over06">
+							<input type="text" id="bowlOver0306"> 
+						</td>
+						<td class="bowlOver" id="over07">
+							<input type="text" id="bowlOver0307"> 
+						</td>
+						<td class="bowlOver" id="over08">
+							<input type="text" id="bowlOver0308"> 
+						</td>
+						<td class="bowlOver" id="over09">
+							<input type="text" id="bowlOver0309"> 
+						</td>
+						<td class="bowlOver" id="over10">
+							<input type="text" id="bowlOver0310"> 
+						</td>
+						<td class="bowlOver" id="over11">
+							<input type="text" id="bowlOver0311"> 
+						</td>
+						<td class="bowlOver" id="over12">
+							<input type="text" id="bowlOver0312"> 
+						</td>
+						<td class="bowlOver" id="over13">
+							<input type="text" id="bowlOver0313"> 
+						</td>
+						<td class="bowlOver" id="over14">
+							<input type="text" id="bowlOver0314"> 
+						</td>
+						<td class="bowlOver" id="over15">
+							<input type="text" id="bowlOver0315"> 
+						</td>
+						<td class="bowlOver" id="over16">
+							<input type="text" id="bowlOver0316"> 
+						</td>
+						<td class="bowlOver" id="over17">
+							<input type="text" id="bowlOver0317"> 
+						</td>
+						<td class="bowlOver" id="over18">
+							<input type="text" id="bowlOver0318"> 
+						</td>
+						<td class="bowlOver" id="over19">
+							<input type="text" id="bowlOver0319"> 
+						</td>
+						<td class="bowlOver" id="over20">
+							<input type="text" id="bowlOver0320"> 
+						</td>
+						<td class="bowlOver" id="over21">
+							<input type="text" id="bowlOver0321"> 
+						</td>
+						<td class="bowlOver" id="over22">
+							<input type="text" id="bowlOver0322"> 
+						</td>
+						<td class="bowlOver" id="over23">
+							<input type="text" id="bowlOver0323"> 
+						</td>
+						<td class="bowlOver" id="over24">
+							<input type="text" id="bowlOver0324"> 
+						</td>
+						<td class="bowlOver" id="over25">
+							<input type="text" id="bowlOver0325"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlOverTot03"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlMdn03"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlWd03"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlNB03"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlRun03"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlWkt03"> 
+						</td>
+					</tr>
+					<tr>
+						<td id="bowlName04" class="bowlNames">
+							4.&nbsp;&nbsp;&nbsp;
+							<input type="text" id="bowlN04" name="bowlN04" style="width: 75%;">
+						</td>
+						<td class="bowlOver" id="over01">
+							<input type="text" id="bowlOver0401"> 
+						</td>
+						<td class="bowlOver" id="over02">
+							<input type="text" id="bowlOver0402"> 
+						</td>
+						<td class="bowlOver" id="over03">
+							<input type="text" id="bowlOver0403"> 
+						</td>
+						<td class="bowlOver" id="over04">
+							<input type="text" id="bowlOver0404"> 
+						</td>
+						<td class="bowlOver" id="over05">
+							<input type="text" id="bowlOver0405"> 
+						</td>
+						<td class="bowlOver" id="over06">
+							<input type="text" id="bowlOver0406"> 
+						</td>
+						<td class="bowlOver" id="over07">
+							<input type="text" id="bowlOver0407"> 
+						</td>
+						<td class="bowlOver" id="over08">
+							<input type="text" id="bowlOver0408"> 
+						</td>
+						<td class="bowlOver" id="over09">
+							<input type="text" id="bowlOver0409"> 
+						</td>
+						<td class="bowlOver" id="over10">
+							<input type="text" id="bowlOver0410"> 
+						</td>
+						<td class="bowlOver" id="over11">
+							<input type="text" id="bowlOver0411"> 
+						</td>
+						<td class="bowlOver" id="over12">
+							<input type="text" id="bowlOver0412"> 
+						</td>
+						<td class="bowlOver" id="over13">
+							<input type="text" id="bowlOver0413"> 
+						</td>
+						<td class="bowlOver" id="over14">
+							<input type="text" id="bowlOver0414"> 
+						</td>
+						<td class="bowlOver" id="over15">
+							<input type="text" id="bowlOver0415"> 
+						</td>
+						<td class="bowlOver" id="over16">
+							<input type="text" id="bowlOver0416"> 
+						</td>
+						<td class="bowlOver" id="over17">
+							<input type="text" id="bowlOver0417"> 
+						</td>
+						<td class="bowlOver" id="over18">
+							<input type="text" id="bowlOver0418"> 
+						</td>
+						<td class="bowlOver" id="over19">
+							<input type="text" id="bowlOver0419"> 
+						</td>
+						<td class="bowlOver" id="over20">
+							<input type="text" id="bowlOver0420"> 
+						</td>
+						<td class="bowlOver" id="over21">
+							<input type="text" id="bowlOver0421"> 
+						</td>
+						<td class="bowlOver" id="over22">
+							<input type="text" id="bowlOver0422"> 
+						</td>
+						<td class="bowlOver" id="over23">
+							<input type="text" id="bowlOver0423"> 
+						</td>
+						<td class="bowlOver" id="over24">
+							<input type="text" id="bowlOver0424"> 
+						</td>
+						<td class="bowlOver" id="over25">
+							<input type="text" id="bowlOver0425"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlOverTot04"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlMdn04"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlWd04"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlNB04"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlRun04"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlWkt04"> 
+						</td>
+					</tr>
+					<tr>
+						<td id="bowlName05" class="bowlNames">
+							5.&nbsp;&nbsp;&nbsp;
+							<input type="text" id="bowlN05" name="bowlN05" style="width: 75%;">
+						</td>
+						<td class="bowlOver" id="over01">
+							<input type="text" id="bowlOver0501"> 
+						</td>
+						<td class="bowlOver" id="over02">
+							<input type="text" id="bowlOver0502"> 
+						</td>
+						<td class="bowlOver" id="over03">
+							<input type="text" id="bowlOver0503"> 
+						</td>
+						<td class="bowlOver" id="over04">
+							<input type="text" id="bowlOver0504"> 
+						</td>
+						<td class="bowlOver" id="over05">
+							<input type="text" id="bowlOver0505"> 
+						</td>
+						<td class="bowlOver" id="over06">
+							<input type="text" id="bowlOver0506"> 
+						</td>
+						<td class="bowlOver" id="over07">
+							<input type="text" id="bowlOver0507"> 
+						</td>
+						<td class="bowlOver" id="over08">
+							<input type="text" id="bowlOver0508"> 
+						</td>
+						<td class="bowlOver" id="over09">
+							<input type="text" id="bowlOver0509"> 
+						</td>
+						<td class="bowlOver" id="over10">
+							<input type="text" id="bowlOver0510"> 
+						</td>
+						<td class="bowlOver" id="over11">
+							<input type="text" id="bowlOver0511"> 
+						</td>
+						<td class="bowlOver" id="over12">
+							<input type="text" id="bowlOver0512"> 
+						</td>
+						<td class="bowlOver" id="over13">
+							<input type="text" id="bowlOver0513"> 
+						</td>
+						<td class="bowlOver" id="over14">
+							<input type="text" id="bowlOver0514"> 
+						</td>
+						<td class="bowlOver" id="over15">
+							<input type="text" id="bowlOver0515"> 
+						</td>
+						<td class="bowlOver" id="over16">
+							<input type="text" id="bowlOver0516"> 
+						</td>
+						<td class="bowlOver" id="over17">
+							<input type="text" id="bowlOver0517"> 
+						</td>
+						<td class="bowlOver" id="over18">
+							<input type="text" id="bowlOver0518"> 
+						</td>
+						<td class="bowlOver" id="over19">
+							<input type="text" id="bowlOver0519"> 
+						</td>
+						<td class="bowlOver" id="over20">
+							<input type="text" id="bowlOver0520"> 
+						</td>
+						<td class="bowlOver" id="over21">
+							<input type="text" id="bowlOver0521"> 
+						</td>
+						<td class="bowlOver" id="over22">
+							<input type="text" id="bowlOver0522"> 
+						</td>
+						<td class="bowlOver" id="over23">
+							<input type="text" id="bowlOver0523"> 
+						</td>
+						<td class="bowlOver" id="over24">
+							<input type="text" id="bowlOver0524"> 
+						</td>
+						<td class="bowlOver" id="over25">
+							<input type="text" id="bowlOver0525"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlOverTot05"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlMdn05"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlWd05"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlNB05"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlRun05"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlWkt05"> 
+						</td>
+					</tr>
+					<tr>
+						<td id="bowlName06" class="bowlNames">
+							6.&nbsp;&nbsp;&nbsp;
+							<input type="text" id="bowlN06" name="bowlN06" style="width: 75%;">
+						</td>
+						<td class="bowlOver" id="over01">
+							<input type="text" id="bowlOver0601"> 
+						</td>
+						<td class="bowlOver" id="over02">
+							<input type="text" id="bowlOver0602"> 
+						</td>
+						<td class="bowlOver" id="over03">
+							<input type="text" id="bowlOver0603"> 
+						</td>
+						<td class="bowlOver" id="over04">
+							<input type="text" id="bowlOver0604"> 
+						</td>
+						<td class="bowlOver" id="over05">
+							<input type="text" id="bowlOver0605"> 
+						</td>
+						<td class="bowlOver" id="over06">
+							<input type="text" id="bowlOver0606"> 
+						</td>	
+						<td class="bowlOver" id="over07">
+							<input type="text" id="bowlOver0607"> 
+						</td>
+						<td class="bowlOver" id="over08">
+							<input type="text" id="bowlOver0608"> 
+						</td>
+						<td class="bowlOver" id="over09">
+							<input type="text" id="bowlOver0609"> 
+						</td>
+						<td class="bowlOver" id="over10">
+							<input type="text" id="bowlOver0610"> 
+						</td>
+						<td class="bowlOver" id="over11">
+							<input type="text" id="bowlOver0611"> 
+						</td>
+						<td class="bowlOver" id="over12">
+							<input type="text" id="bowlOver0612"> 
+						</td>
+						<td class="bowlOver" id="over13">
+							<input type="text" id="bowlOver0613"> 
+						</td>
+						<td class="bowlOver" id="over14">
+							<input type="text" id="bowlOver0614"> 
+						</td>
+						<td class="bowlOver" id="over15">
+							<input type="text" id="bowlOver0615"> 
+						</td>
+						<td class="bowlOver" id="over16">
+							<input type="text" id="bowlOver0616"> 
+						</td>
+						<td class="bowlOver" id="over17">
+							<input type="text" id="bowlOver0617"> 
+						</td>
+						<td class="bowlOver" id="over18">
+							<input type="text" id="bowlOver0618"> 
+						</td>
+						<td class="bowlOver" id="over19">
+							<input type="text" id="bowlOver0619"> 
+						</td>
+						<td class="bowlOver" id="over20">
+							<input type="text" id="bowlOver0620"> 
+						</td>
+						<td class="bowlOver" id="over21">
+							<input type="text" id="bowlOver0821"> 
+						</td>
+						<td class="bowlOver" id="over22">
+							<input type="text" id="bowlOver0622"> 
+						</td>
+						<td class="bowlOver" id="over23">
+							<input type="text" id="bowlOver0623"> 
+						</td>
+						<td class="bowlOver" id="over24">
+							<input type="text" id="bowlOver0624"> 
+						</td>
+						<td class="bowlOver" id="over25">
+							<input type="text" id="bowlOver0625"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlOverTot06"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlMdn06"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlWd06"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlNB06"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlRun06"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlWkt06"> 
+						</td>
+					</tr>
+					<tr>
+						<td id="bowlName07" class="bowlNames">
+							7.&nbsp;&nbsp;&nbsp;
+							<input type="text" id="bowlN07" name="bowlN07" style="width: 75%;">
+						</td>
+						<td class="bowlOver" id="over01">
+							<input type="text" id="bowlOver0701"> 
+						</td>
+						<td class="bowlOver" id="over02">
+							<input type="text" id="bowlOver0702"> 
+						</td>
+						<td class="bowlOver" id="over03">
+							<input type="text" id="bowlOver0703"> 
+						</td>
+						<td class="bowlOver" id="over04">
+							<input type="text" id="bowlOver0704"> 
+						</td>
+						<td class="bowlOver" id="over05">
+							<input type="text" id="bowlOver0705"> 
+						</td>
+						<td class="bowlOver" id="over06">
+							<input type="text" id="bowlOver0706"> 
+						</td>
+						<td class="bowlOver" id="over07">
+							<input type="text" id="bowlOver0707"> 
+						</td>
+						<td class="bowlOver" id="over08">
+							<input type="text" id="bowlOver0708"> 
+						</td>
+						<td class="bowlOver" id="over09">
+							<input type="text" id="bowlOver0709"> 
+						</td>
+						<td class="bowlOver" id="over10">
+							<input type="text" id="bowlOver0710"> 
+						</td>
+						<td class="bowlOver" id="over11">
+							<input type="text" id="bowlOver0711"> 
+						</td>
+						<td class="bowlOver" id="over12">
+							<input type="text" id="bowlOver0712"> 
+						</td>
+						<td class="bowlOver" id="over13">
+							<input type="text" id="bowlOver0713"> 
+						</td>
+						<td class="bowlOver" id="over14">
+							<input type="text" id="bowlOver0714"> 
+						</td>
+						<td class="bowlOver" id="over15">
+							<input type="text" id="bowlOver0715"> 
+						</td>
+						<td class="bowlOver" id="over16">
+							<input type="text" id="bowlOver0716"> 
+						</td>
+						<td class="bowlOver" id="over17">
+							<input type="text" id="bowlOver0717"> 
+						</td>
+						<td class="bowlOver" id="over18">
+							<input type="text" id="bowlOver0718"> 
+						</td>
+						<td class="bowlOver" id="over19">
+							<input type="text" id="bowlOver0719"> 
+						</td>
+						<td class="bowlOver" id="over20">
+							<input type="text" id="bowlOver0720"> 
+						</td>
+						<td class="bowlOver" id="over21">
+							<input type="text" id="bowlOver0721"> 
+						</td>
+						<td class="bowlOver" id="over22">
+							<input type="text" id="bowlOver0722"> 
+						</td>
+						<td class="bowlOver" id="over23">
+							<input type="text" id="bowlOver0723"> 
+						</td>
+						<td class="bowlOver" id="over24">
+							<input type="text" id="bowlOver0724"> 
+						</td>
+						<td class="bowlOver" id="over25">
+							<input type="text" id="bowlOver0725"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlOverTot07"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlMdn07"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlWd07"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlNB07"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlRun07"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlWkt07"> 
+						</td>
+					</tr>
+					<tr>
+						<td id="bowlName08" class="bowlNames">
+							8.&nbsp;&nbsp;&nbsp;
+							<input type="text" id="bowlN08" name="bowlN08" style="width: 75%;">
+						</td>
+						<td class="bowlOver" id="over01">
+							<input type="text" id="bowlOver0801"> 
+						</td>
+						<td class="bowlOver" id="over02">
+							<input type="text" id="bowlOver0802"> 
+						</td>
+						<td class="bowlOver" id="over03">
+							<input type="text" id="bowlOver0803"> 
+						</td>
+						<td class="bowlOver" id="over04">
+							<input type="text" id="bowlOver0804"> 
+						</td>
+						<td class="bowlOver" id="over05">
+							<input type="text" id="bowlOver0805"> 
+						</td>
+						<td class="bowlOver" id="over06">
+							<input type="text" id="bowlOver0806"> 
+						</td>
+						<td class="bowlOver" id="over07">
+							<input type="text" id="bowlOver0807"> 
+						</td>
+						<td class="bowlOver" id="over08">
+							<input type="text" id="bowlOver0808"> 
+						</td>
+						<td class="bowlOver" id="over09">
+							<input type="text" id="bowlOver0809"> 
+						</td>
+						<td class="bowlOver" id="over10">
+							<input type="text" id="bowlOver0810"> 
+						</td>
+						<td class="bowlOver" id="over11">
+							<input type="text" id="bowlOver0811"> 
+						</td>
+						<td class="bowlOver" id="over12">
+							<input type="text" id="bowlOver0812"> 
+						</td>
+						<td class="bowlOver" id="over13">
+							<input type="text" id="bowlOver0813"> 
+						</td>
+						<td class="bowlOver" id="over14">
+							<input type="text" id="bowlOver0814"> 
+						</td>
+						<td class="bowlOver" id="over15">
+							<input type="text" id="bowlOver0815"> 
+						</td>
+						<td class="bowlOver" id="over16">
+							<input type="text" id="bowlOver0816"> 
+						</td>
+						<td class="bowlOver" id="over17">
+							<input type="text" id="bowlOver0817"> 
+						</td>
+						<td class="bowlOver" id="over18">
+							<input type="text" id="bowlOver0818"> 
+						</td>
+						<td class="bowlOver" id="over19">
+							<input type="text" id="bowlOver0819"> 
+						</td>
+						<td class="bowlOver" id="over20">
+							<input type="text" id="bowlOver0820"> 
+						</td>
+						<td class="bowlOver" id="over21">
+							<input type="text" id="bowlOver0821"> 
+						</td>
+						<td class="bowlOver" id="over22">
+							<input type="text" id="bowlOver0822"> 
+						</td>
+						<td class="bowlOver" id="over23">
+							<input type="text" id="bowlOver0823"> 
+						</td>
+						<td class="bowlOver" id="over24">
+							<input type="text" id="bowlOver0824"> 
+						</td>
+						<td class="bowlOver" id="over25">
+							<input type="text" id="bowlOver0825"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlOverTot08"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlMdn08"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlWd08"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlNB08"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlRun08"> 
+						</td>
+						<td class="bowlOverTot">
+							<input type="text" id="bowlWkt08"> 
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<div id="overEdit" name="Over Details" style="display: none;">
+				<table width="450px">
+					<tr>
+						<td style="font-size: 1.05em; font-weight: bold; color: black;">Match Over:</td>
+						<td id="dlgMOver"></td>
+						<td style="font-size: 1.15em; font-weight: bold; color: darkgreen;" colspan="2">Batsmen</td>
+					</tr>
+					<tr>
+						<td style="font-size: 1.05em; font-weight: bold; color: black;">Bowler:</td>
+						<td id="dlgBName">&nbsp;</td>
+						<td id="dlgStrike01"></td>
+						<td id="dlgBat01">&nbsp;</td>					
+					</tr>
+					<tr>
+						<td style="font-size: 1.05em; font-weight: bold; color: black; padding-bottom: 5px;">Over:</td>
+						<td id="dlgBOver">&nbsp;</td>
+						<td id="dlgStrike02"></td>
+						<td id="dlgBat02">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="font-size: 1.15em; font-weight: bold; color: darkgreen; padding-top: 5px;" colspan="4">
+							<table width="100%">
+								<tr>
+									<td style="font-size: 0.9em;"><button type="button" value="0" class="btnSml" onclick=updateScore("0")>0</button></td>
+									<td style="font-size: 0.9em;"><button type="button" value="1" class="btnSml" onclick=updateScore("1")>1</button></td>
+									<td style="font-size: 0.9em;"><button type="button" value="2" class="btnSml" onclick=updateScore("2")>2</button></td>
+									<td style="font-size: 0.9em;"><button type="button" value="3" class="btnSml" onclick=updateScore("3")>3</button></td>
+									<td style="font-size: 0.9em;"><button type="button" value="4" class="btnSml" onclick=updateScore("4")>4</button></td>
+									<td style="font-size: 0.9em;"><button type="button" value="5" class="btnSml" onclick=updateScore("5")>5</button></td>
+									<td style="font-size: 0.9em;"><button type="button" value="6" class="btnSml" onclick=updateScore("6")>6</button></td>
+									<td style="font-size: 0.9em;"><button type="button" value="7" class="btnSml" onclick=updateScore("7")>7</button></td>
+									<td style="font-size: 0.9em;"><button type="button" value="8" class="btnSml" onclick=updateScore("8")>8</button></td>
+									<td style="font-size: 0.9em;"><button type="button" value="9" class="btnSml" onclick=updateScore("9")>9</button></td>
+								</tr>
+								<tr>
+									<td colspan="10" style="background-color: white; text-align: center;padding: 10px 0 10px 0;"><input type="text" id="editOverDtls" style="width: 95%; font-size: 2.25em;border-width: 0px;" /></td>						
+								</tr>
+								<tr>
+									<td colspan="2" style="font-size: 0.9em;"><button id="btnB" type="button" value="B" class="btnLrgUp" onclick="toggleBtn(this)">Bye</button></td>
+									<td colspan="2" style="font-size: 0.9em;"><button id="btnLB" type="button" value="LB" class="btnLrgUp" onclick="toggleBtn(this)">Leg Bye</button></td>
+									<td colspan="2" style="font-size: 0.9em;"><button id="btnW" type="button" value="W" class="btnLrgUp" onclick="toggleBtn(this)">Wide</button></td>
+									<td colspan="2" style="font-size: 0.9em;"><button id="btnNB" type="button" value="NB" class="btnLrgUp" onclick="toggleBtn(this)">No Ball</button></td>
+									<td colspan="2" style="font-size: 0.9em;"><button id="btnRoB" type="button" value="RoB" class="btnLrgUp" onclick="toggleBtn(this)">Off Bat</button></td>
+								  </tr>
+							</table> 
+							<table>
+								<tr style="padding-top: 3px;">
+									<td style="width: 19%;">&nbsp;</td>
+									<td class="howoutDtls" style="font-size: 0.8em; padding-left: 2px; width: 27%; visibility: hidden;">How Out</td>
+									<td class="howoutDtls" style="font-size: 0.8em; padding-left: 2px; width: 27%; visibility: hidden;">Batsman Out</td>
+									<td class="howoutDtls" style="font-size: 0.8em; padding-left: 2px; width: 27%; visibility: hidden;">Fielder</td>
+								</tr>
+								<tr>
+									<td style="font-size: 0.8em;"><button style="width: 80px;" id="btnX" type="button" value="X" onclick="wicket()">Wicket</button></td>
+									<td class="howoutDtls" style="visibility: hidden;">
+										<input id="dlgHowOut" list="howout" style="font-size: 0.8em; width: 110px;">
+										<datalist id="howout">
+											<option value="bowled" />
+											<option value="caught" />
+											<option value="LBW" />
+											<option value="stumped" />
+											<option value="run out" />
+											<option value="hit wicket" />
+											<option value="retired hurt" />										
+										</datalist>
+									</td>
+									<td class="howoutDtls" style="visibility: hidden;"><input id="dlgBatOut" type="text" style="font-size: 0.8em; width: 110px;"></td>
+									<td class="howoutDtls" style="visibility: hidden;"><input id="dlgFldOut" type="text" style="font-size: 0.8em; width: 110px;"></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-size: 1.15em; font-weight: bold; color: darkgreen; padding-top: 5px;" colspan="4">Progressive Scores</td>
+					</tr>
+					<tr>
+						<td style="font-size: 1.05em; font-weight: bold; color: black;">Bowler</td>
+						<td id="dlgBScore">&nbsp;</td>
+						<td style="font-size: 1.05em; font-weight: bold; color: black;">Match</td>
+						<td id="dlgMScore">&nbsp;</td>
+					</tr>
+					<tr style="display:none;">
+						<td id="dlgSund"></td>
+						<td id="dlgRoB"></td>
+					</tr>
+				</table>
+		</div>
+ 		<div id="overDisplay" name="Over Details">
+				<table width="450px">
+					<tr>
+						<td style="font-size: 1.05em; font-weight: bold; color: black;">Match Over:</td>
+						<td id="dlgMOver"></td>
+						<td style="font-size: 1.15em; font-weight: bold; color: darkgreen;" colspan="2">Batsmen</td>
+					</tr>
+					<tr>
+						<td style="font-size: 1.05em; font-weight: bold; color: black;">Bowler:</td>
+						<td id="dlgBName">&nbsp;</td>
+						<td>o</td>
+						<td id="dlgBat01">&nbsp;</td>					
+					</tr>
+					<tr>
+						<td style="font-size: 1.05em; font-weight: bold; color: black; padding-bottom: 5px;">Over:</td>
+						<td id="dlgBOver">&nbsp;</td>
+						<td>c</td>
+						<td id="dlgBat02">&nbsp;</td>
+					</tr>
+					<tr id="dspOver">
+						<td id="dlgBalls" style="font-size: 2.5em; font-weight: bold; color: darkblue; background-color: white; text-align: center; padding: 20px 0 20px 0;" colspan="4">&nbsp;</td>
+					</tr>
+					<tr>
+						<td style="font-size: 1.15em; font-weight: bold; color: darkgreen; padding-top: 5px;" colspan="4">Progressive Scores</td>
+					</tr>
+					<tr>
+						<td style="font-size: 1.05em; font-weight: bold; color: black;">Bowler</td>
+						<td id="dlgBScore">&nbsp;</td>
+						<td style="font-size: 1.05em; font-weight: bold; color: black;">Match</td>
+						<td id="dlgMScore">&nbsp;</td>
+					</tr>
+				</table>
+		</div>
+ 		<section id="globals" style="display: inline-block;">
+			<div id="glbOID"></div>		
+			<div id="glbStriker"></div>		
+			<div id="glbNStriker"></div>		
+			<div id="glbBall"></div>		
+			<div id="glbBallRem"></div>		
+			<div id="glbMWkts"></div>		
+			<div id="glbMRuns"></div>		
+			<div id="glbMScore"></div>		
+			<div id="glbBWkts"></div>		
+			<div id="glbBRuns"></div>		
+			<div id="glbBScore"></div>		
+		</section>
+	</body>
+</html>

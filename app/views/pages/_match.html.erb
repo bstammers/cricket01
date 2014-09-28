@@ -1,0 +1,19 @@
+<%= form_for @match do |m|%>
+	<td class="matchLabel">Competition:</td>
+	<td class="matchField"><%= m.text_field :competition %></td>
+	<td class="matchLabel">Grade:</td>
+	<td class="matchField"><%= m.text_field :grade %></td>
+</tr>
+<tr>
+	<td class="matchLabel">Home team:</td>
+	<td class="matchField"><%= m.text_field :home_team %></td>
+	<td class="matchLabel">Away team:</td>
+	<td class="matchField"><%= m.text_field :away_team %></td>
+</tr>
+<tr>
+	<td class="matchLabel">Match date:</td>
+	<td class="matchField"><%= m.text_field :start_date %></td>
+	<td class="matchLabel">Ground:</td>
+	<td class="matchField"><%= m.text_field :ground %></td>
+<% end %>
+

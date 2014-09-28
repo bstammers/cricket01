@@ -11,6 +11,7 @@ class InningsController < ApplicationController
   end
 
   def show
+    session[:inning] = @inning.id
   end
 
   def new

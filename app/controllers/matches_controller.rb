@@ -6,7 +6,7 @@ class MatchesController < ApplicationController
     @matches = Match.all
   end
   
-  def show   
+  def show
   end
   
   def new

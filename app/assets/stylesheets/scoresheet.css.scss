@@ -1,0 +1,189 @@
+body {
+  font-family: Tahoma, sans serif;
+  font-size: 0.8em;
+}
+span {
+  display: inline-block;
+}
+button {
+  width: 100%;
+  background-color: lightgray;
+}
+#matchDtls {
+  background-color: white;
+  width: 100%;
+  border: 2px solid green;
+  border-bottom: 0px solid green;
+  border-collapse: collapse;
+
+  tr {
+//    height: 35px;
+  }
+  .matchLabel {
+    color: blue;
+    width: 14%;
+    font-weight: bold;
+    padding-left: 5px;
+    border: 1px solid green;
+    background-color: #f5f5f5;
+    height: 35px;
+  }
+  .matchField {
+    color: blue;
+    width: 34%;
+    padding-left: 5px;
+    border: 1px solid green;
+    height: 35px;
+
+    input {
+    //  background-color: transparent;
+    //  border-color: transparent;
+      width: 90%;
+      height: 25px;
+    }
+  }
+}
+#batDtls {
+  
+  table {
+    width: 100%;
+    border: 2px solid green;
+    border-collapse: collapse;  
+    border-bottom-width: 1px;
+  }
+  td {
+    border: 1px solid green;
+    border-collapse: collapse;  
+  }
+}
+.batNames {
+  width: 20%;
+  padding-left: 5px;
+}
+.batDtls {
+  width: 50%;
+  padding-left: 5px;
+}
+.batOut {
+  width: 13%;
+  padding-left: 5px;
+}
+.batRun {
+  width: 4%;
+  padding-left: 5px;
+}
+.dtlsSpace {
+  width: 48%;
+  vertical-align: top;
+}
+// .sectionUp {
+//  background-color: transparent;
+//  background-image: url('img/arrow-up-04.png');
+//  background-repeat: no-repeat;
+//  background-position: top center;
+//  width: 32px;
+//  height: 32px;
+//  cursor: pointer;
+//}
+//.sectionDown {
+//  background-color: transparent;
+//  background-image: url('img/arrow-down-04.png');
+//  background-repeat: no-repeat;
+//  background-position: top center;
+//  width: 32px;
+//  height: 32px;
+//  cursor: pointer;
+//} 
+#summary {
+  
+  table {
+    width: 100%;
+    border: 2px solid green;
+    border-collapse: collapse;  
+    border-top-width: 0px;
+    border-bottom-width: 1px;
+  }
+  td {
+    border: 1px solid green;
+    border-collapse: collapse;  
+  }
+}
+.summaryScore {
+  width: 13%;
+  font-size: 2.0em;
+  text-align: center;
+}
+.summaryLabel {
+  width: 10%;
+  font-size: 1.7em;
+  font-weight: bold;
+  color: blue;
+  text-align: center;
+}
+.summarySundry {
+  width: 6%;
+  font-size:9pt;
+  text-align: center;
+}
+#FoW {
+  font-size:10pt;
+  font-weight: bold;
+  text-align: center;
+}
+.bowlNames {
+  width: 20%;
+  padding-left: 5px;
+}
+.bowlOver {
+  width: 3%;
+  padding-left: 2px;
+  padding--right: 2px;
+
+  input {
+    width: 90%;
+  }
+}
+.bowlOverTot {
+  width: 4%;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-left: 2px solid green;
+  background-color: #f5f5f5;
+
+  input {
+    width: 90%;
+  }
+}
+#bowlDtls {
+  table {
+    width: 100%;
+    border: 2px solid green;
+    border-collapse: collapse;  
+    border-top-width: 0px;
+  }
+  td {
+    border: 1px solid green;
+    border-collapse: collapse;  
+  }
+}
+// dialogue styles
+.dlgLabel {
+  font-size: 1.25em;
+  font-weight: bold;
+  color: darkblue !important;
+}
+.btnLrgUp {
+//  width: 50px; 
+  background-color: #ccc;
+  border-top: 2px solid #eaeaea;
+  border-left: 2px solid #eaeaea;
+  border-bottom: 2px solid #777;
+  border-right: 2px solid #777;
+}
+.btnLrgDown {
+  background-color: #bbb;
+  border-top: 2px solid #777;
+  border-left: 2px solid #777;
+  border-bottom: 2px solid #eaeaea;
+  border-right: 2px solid #eaeaea;
+}

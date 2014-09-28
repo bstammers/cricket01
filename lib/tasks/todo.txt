@@ -82,11 +82,13 @@ DONE	16.	Add new methods to ball controller one at a time to pass rspec tests
 --------------------------------------------------------------------------------------------------
 v1.0 - FIFTH CYCLE
 
-	1.	Add scoresheet static page and stylesheets
+DONE	1.	Add scoresheet static page and stylesheets
 	2.	Integrate AJAX into site and add to match component of scoresheet
 	3.	Integrate AJAX into inning component of scoresheet
 	4.	Integrate AJAX into batsman component of scoresheet
 	5.	Integrate AJAX into bowler component of scoresheet
+	6.	Add player model to store player names for each team:  first name, last name, full name, display name
+	7.	Work out how to build a select from player model display names to include when adding a new bowler/batter
 
 
 -------------------------------------------------------------------------------------------------

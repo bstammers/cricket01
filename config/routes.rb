@@ -11,6 +11,14 @@ Cricket01::Application.routes.draw do
     end
   end
 
+  root 'matches#index'
+  
+#  get "pages/home"
+#  get "pages/scoresheet"
+  get "/scoresheet", to: "pages#scoresheet", as: :scoresheet
+
+  #get "/scoresheet", to: redirect('/shared/scoresheet.html')
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
