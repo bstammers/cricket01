@@ -1,0 +1,19 @@
+h2>Player Details</h2>
+
+<p id="notice"><%= notice %></p>
+
+<%= link_to "Back", match_players_path(@player.match_id) %>&nbsp;&nbsp;
+<%= link_to "Edit", edit_player_path(@player.id) %>&nbsp;&nbsp;
+
+<table width="100%">
+	<tr><td><b>First Name</b></td></tr>
+	<tr><td><%= @player.first_name %></td></tr>
+	<tr><td><b>Last Name</b></td></tr>
+	<tr><td><%= @player.last_name %></td></tr>
+	<tr><td><b>Full Name</b></td></tr>
+	<tr><td><%= @player.full_name %></td></tr>
+	<tr><td><b>Display Name</b></td></tr>
+	<tr><td><%= @player.display_name %></td></tr>
+	<tr><td><b>Team</b></td></tr>
+	<tr><td><%= @player.team %></td></tr>
+</table>

@@ -52,7 +52,7 @@ describe InningsController do
           post :create, match_id: @match, inning: @inning_bat_attrib
         }.to_not change{Inning.count}
       end
-      it "does not create a new innning successfully without bowling team" do
+      it "does not create a new inning successfully without bowling team" do
         expect {
           post :create, match_id: @match, inning: @inning_bowl_attrib
         }.to_not change{Inning.count}

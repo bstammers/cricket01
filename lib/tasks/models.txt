@@ -78,7 +78,7 @@ PLAYER
 	- full_name
 	- display_name
 	- team
-	--- BELONGS TO MATCH    (polymorphic)
-	--- BELONGS TO BOWLER   (polymorphic)
-	--- BELONGS TO BATSMAN  (polymorphic)
+	--- BELONGS TO MATCH
+	--- BELONGS TO BOWLER   (polymorphic) - v2.0
+	--- BELONGS TO BATSMAN  (polymorphic) - v2.0
 	

@@ -1,0 +1,9 @@
+<%= simple_form_for [@match, @player] do |f| %>
+	<%= f.error_notification %>
+	<%= f.input(:first_name) %>
+	<%= f.input(:last_name) %>
+	<%= f.input(:full_name) %>
+	<%= f.input(:display_name) %>
+	<%= f.input(:team) %>
+	<%= f.button(:submit) %>
+<% end %>

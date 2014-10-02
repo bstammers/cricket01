@@ -29,6 +29,7 @@
 				<%= link_to "Edit", edit_match_path(match.id) %>&nbsp;&nbsp;
 				<%= link_to "Delete", match_path(match.id), method: :destroy %>&nbsp;&nbsp;
 				<%= link_to "Innings", match_innings_path(match.id) %>&nbsp;&nbsp;
+				<%= link_to "Players", match_players_path(match.id) %>&nbsp;&nbsp;
 				<%= link_to "Scoresheet", scoresheet_path %>
 			</td>
 		</tr>
