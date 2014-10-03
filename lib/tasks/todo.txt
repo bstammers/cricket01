@@ -89,6 +89,7 @@ DONE	1.	Add scoresheet static page and stylesheets
 	5.	Integrate AJAX into bowler component of scoresheet
 DONE	6.	Add player model to store player names for each team:  first name, last name, full name, display name
 		a. Add validation so that a minimum of 11 players must be added for each team.
+		b. Set up scopes in the player model to list players by team...possibly count as well.
 	7.	Work out how to build a select from player model display names to include when adding a new bowler/batter
 
 
