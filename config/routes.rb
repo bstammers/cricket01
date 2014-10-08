@@ -14,7 +14,8 @@ Cricket01::Application.routes.draw do
     end
   end
 
-  root 'matches#index'
+#  root 'matches#index'
+  root 'pages#home'
   
 #  get "pages/home"
 #  get "pages/scoresheet"

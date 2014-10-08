@@ -7,5 +7,8 @@ class Player < ActiveRecord::Base
   def self.list(team)
     where(team: team).order("players.id ASC")
   end
-  
+  def self.count(team)
+    where(team: team).count
+  end
+
 end
